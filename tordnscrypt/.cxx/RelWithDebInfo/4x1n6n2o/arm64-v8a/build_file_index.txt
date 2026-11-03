@@ -1,1 +1,0 @@
-/home/hex/InviZible-Night/tordnscrypt/CMakeLists.txt

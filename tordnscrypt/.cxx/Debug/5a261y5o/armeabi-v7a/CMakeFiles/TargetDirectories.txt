@@ -1,3 +1,0 @@
-/home/hex/InviZible-Night/tordnscrypt/.cxx/Debug/5a261y5o/armeabi-v7a/CMakeFiles/invizible.dir
-/home/hex/InviZible-Night/tordnscrypt/.cxx/Debug/5a261y5o/armeabi-v7a/CMakeFiles/edit_cache.dir
-/home/hex/InviZible-Night/tordnscrypt/.cxx/Debug/5a261y5o/armeabi-v7a/CMakeFiles/rebuild_cache.dir

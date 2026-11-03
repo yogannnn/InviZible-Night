@@ -1,3 +1,0 @@
-pan.alexander.tordnscrypt.test
-string appProcVersion
-string package_name

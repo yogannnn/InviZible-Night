@@ -1,2 +1,0 @@
-ninja: Entering directory `/home/hex/InviZible-Night/tordnscrypt/.cxx/Debug/5a261y5o/armeabi-v7a'
-ninja: no work to do.
