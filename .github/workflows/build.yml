@@ -10,36 +10,39 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          fetch-depth: 0
 
-    - name: Set up JDK 17
-      uses: actions/setup-java@v4
-      with:
-        java-version: '17'
-        distribution: 'temurin'
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
 
-    - name: Setup Android SDK
-      uses: android-actions/setup-android@v4
-      with:
-        packages: 'platform-tools'
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v4
+        with:
+          packages: 'platform-tools'
 
-    - name: Restore Keystore
-      run: |
-        echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 --decode > tordnscrypt/release-key.jks
+      - name: Restore Keystore
+        run: |
+          echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 --decode > tordnscrypt/release-key.jks
 
-    - name: Build Release APK
-      env:
-        CI: true
-        KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
-        KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
-        KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
-      run: |
-        chmod +x ./gradlew
-        ./gradlew assembleFdroidUniversalRelease
+      - name: Build Release APK
+        env:
+          CI: true
+          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
+        run: |
+          chmod +x ./gradlew
+          ./gradlew assembleFdroidUniversalRelease
 
-    - name: Upload APK
-      uses: actions/upload-artifact@v4
-      with:
-        name: InviZible-Night-APK
-        path: tordnscrypt/build/outputs/apk/fdroidUniversal/release/*.apk
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: InviZible-Night-APK
+          path: tordnscrypt/build/outputs/apk/fdroidUniversal/release/*.apk
