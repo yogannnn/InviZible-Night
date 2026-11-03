@@ -22,7 +22,7 @@ captures/
 bin/
 gen/
 out/
-release/
+/git add -f tordnscrypt/src/release/release/
 # Файлы, созданные во время нативной сборки C++
 obj/
 
