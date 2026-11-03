@@ -1,0 +1,47 @@
+[
+{
+  "directory": "/home/hex/InviZible-Night/tordnscrypt/.cxx/RelWithDebInfo/4x1n6n2o/arm64-v8a",
+  "command": "/home/hex/Android/Sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/linux-x86_64/bin/clang --target=aarch64-none-linux-android21 --sysroot=/home/hex/Android/Sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/linux-x86_64/sysroot -Dinvizible_EXPORTS -I/home/hex/InviZible-Night/tordnscrypt/src/main/jni/invizible -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fexceptions -O2 -g -DNDEBUG -fPIC -Ofast -march=armv8-a+simd -flto=thin -funsafe-math-optimizations -ffast-math -ftree-vectorize -fvectorize -fslp-vectorize -o CMakeFiles/invizible.dir/src/main/jni/invizible/invizible.c.o -c /home/hex/InviZible-Night/tordnscrypt/src/main/jni/invizible/invizible.c",
+  "file": "/home/hex/InviZible-Night/tordnscrypt/src/main/jni/invizible/invizible.c"
+},
+{
+  "directory": "/home/hex/InviZible-Night/tordnscrypt/.cxx/RelWithDebInfo/4x1n6n2o/arm64-v8a",
+  "command": "/home/hex/Android/Sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/linux-x86_64/bin/clang --target=aarch64-none-linux-android21 --sysroot=/home/hex/Android/Sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/linux-x86_64/sysroot -Dinvizible_EXPORTS -I/home/hex/InviZible-Night/tordnscrypt/src/main/jni/invizible -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fexceptions -O2 -g -DNDEBUG -fPIC -Ofast -march=armv8-a+simd -flto=thin -funsafe-math-optimizations -ffast-math -ftree-vectorize -fvectorize -fslp-vectorize -o CMakeFiles/invizible.dir/src/main/jni/invizible/session.c.o -c /home/hex/InviZible-Night/tordnscrypt/src/main/jni/invizible/session.c",
+  "file": "/home/hex/InviZible-Night/tordnscrypt/src/main/jni/invizible/session.c"
+},
+{
+  "directory": "/home/hex/InviZible-Night/tordnscrypt/.cxx/RelWithDebInfo/4x1n6n2o/arm64-v8a",
+  "command": "/home/hex/Android/Sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/linux-x86_64/bin/clang --target=aarch64-none-linux-android21 --sysroot=/home/hex/Android/Sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/linux-x86_64/sysroot -Dinvizible_EXPORTS -I/home/hex/InviZible-Night/tordnscrypt/src/main/jni/invizible -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fexceptions -O2 -g -DNDEBUG -fPIC -Ofast -march=armv8-a+simd -flto=thin -funsafe-math-optimizations -ffast-math -ftree-vectorize -fvectorize -fslp-vectorize -o CMakeFiles/invizible.dir/src/main/jni/invizible/ip.c.o -c /home/hex/InviZible-Night/tordnscrypt/src/main/jni/invizible/ip.c",
+  "file": "/home/hex/InviZible-Night/tordnscrypt/src/main/jni/invizible/ip.c"
+},
+{
+  "directory": "/home/hex/InviZible-Night/tordnscrypt/.cxx/RelWithDebInfo/4x1n6n2o/arm64-v8a",
+  "command": "/home/hex/Android/Sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/linux-x86_64/bin/clang --target=aarch64-none-linux-android21 --sysroot=/home/hex/Android/Sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/linux-x86_64/sysroot -Dinvizible_EXPORTS -I/home/hex/InviZible-Night/tordnscrypt/src/main/jni/invizible -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fexceptions -O2 -g -DNDEBUG -fPIC -Ofast -march=armv8-a+simd -flto=thin -funsafe-math-optimizations -ffast-math -ftree-vectorize -fvectorize -fslp-vectorize -o CMakeFiles/invizible.dir/src/main/jni/invizible/tcp.c.o -c /home/hex/InviZible-Night/tordnscrypt/src/main/jni/invizible/tcp.c",
+  "file": "/home/hex/InviZible-Night/tordnscrypt/src/main/jni/invizible/tcp.c"
+},
+{
+  "directory": "/home/hex/InviZible-Night/tordnscrypt/.cxx/RelWithDebInfo/4x1n6n2o/arm64-v8a",
+  "command": "/home/hex/Android/Sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/linux-x86_64/bin/clang --target=aarch64-none-linux-android21 --sysroot=/home/hex/Android/Sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/linux-x86_64/sysroot -Dinvizible_EXPORTS -I/home/hex/InviZible-Night/tordnscrypt/src/main/jni/invizible -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fexceptions -O2 -g -DNDEBUG -fPIC -Ofast -march=armv8-a+simd -flto=thin -funsafe-math-optimizations -ffast-math -ftree-vectorize -fvectorize -fslp-vectorize -o CMakeFiles/invizible.dir/src/main/jni/invizible/udp.c.o -c /home/hex/InviZible-Night/tordnscrypt/src/main/jni/invizible/udp.c",
+  "file": "/home/hex/InviZible-Night/tordnscrypt/src/main/jni/invizible/udp.c"
+},
+{
+  "directory": "/home/hex/InviZible-Night/tordnscrypt/.cxx/RelWithDebInfo/4x1n6n2o/arm64-v8a",
+  "command": "/home/hex/Android/Sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/linux-x86_64/bin/clang --target=aarch64-none-linux-android21 --sysroot=/home/hex/Android/Sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/linux-x86_64/sysroot -Dinvizible_EXPORTS -I/home/hex/InviZible-Night/tordnscrypt/src/main/jni/invizible -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fexceptions -O2 -g -DNDEBUG -fPIC -Ofast -march=armv8-a+simd -flto=thin -funsafe-math-optimizations -ffast-math -ftree-vectorize -fvectorize -fslp-vectorize -o CMakeFiles/invizible.dir/src/main/jni/invizible/icmp.c.o -c /home/hex/InviZible-Night/tordnscrypt/src/main/jni/invizible/icmp.c",
+  "file": "/home/hex/InviZible-Night/tordnscrypt/src/main/jni/invizible/icmp.c"
+},
+{
+  "directory": "/home/hex/InviZible-Night/tordnscrypt/.cxx/RelWithDebInfo/4x1n6n2o/arm64-v8a",
+  "command": "/home/hex/Android/Sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/linux-x86_64/bin/clang --target=aarch64-none-linux-android21 --sysroot=/home/hex/Android/Sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/linux-x86_64/sysroot -Dinvizible_EXPORTS -I/home/hex/InviZible-Night/tordnscrypt/src/main/jni/invizible -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fexceptions -O2 -g -DNDEBUG -fPIC -Ofast -march=armv8-a+simd -flto=thin -funsafe-math-optimizations -ffast-math -ftree-vectorize -fvectorize -fslp-vectorize -o CMakeFiles/invizible.dir/src/main/jni/invizible/dns.c.o -c /home/hex/InviZible-Night/tordnscrypt/src/main/jni/invizible/dns.c",
+  "file": "/home/hex/InviZible-Night/tordnscrypt/src/main/jni/invizible/dns.c"
+},
+{
+  "directory": "/home/hex/InviZible-Night/tordnscrypt/.cxx/RelWithDebInfo/4x1n6n2o/arm64-v8a",
+  "command": "/home/hex/Android/Sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/linux-x86_64/bin/clang --target=aarch64-none-linux-android21 --sysroot=/home/hex/Android/Sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/linux-x86_64/sysroot -Dinvizible_EXPORTS -I/home/hex/InviZible-Night/tordnscrypt/src/main/jni/invizible -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fexceptions -O2 -g -DNDEBUG -fPIC -Ofast -march=armv8-a+simd -flto=thin -funsafe-math-optimizations -ffast-math -ftree-vectorize -fvectorize -fslp-vectorize -o CMakeFiles/invizible.dir/src/main/jni/invizible/dhcp.c.o -c /home/hex/InviZible-Night/tordnscrypt/src/main/jni/invizible/dhcp.c",
+  "file": "/home/hex/InviZible-Night/tordnscrypt/src/main/jni/invizible/dhcp.c"
+},
+{
+  "directory": "/home/hex/InviZible-Night/tordnscrypt/.cxx/RelWithDebInfo/4x1n6n2o/arm64-v8a",
+  "command": "/home/hex/Android/Sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/linux-x86_64/bin/clang --target=aarch64-none-linux-android21 --sysroot=/home/hex/Android/Sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/linux-x86_64/sysroot -Dinvizible_EXPORTS -I/home/hex/InviZible-Night/tordnscrypt/src/main/jni/invizible -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fexceptions -O2 -g -DNDEBUG -fPIC -Ofast -march=armv8-a+simd -flto=thin -funsafe-math-optimizations -ffast-math -ftree-vectorize -fvectorize -fslp-vectorize -o CMakeFiles/invizible.dir/src/main/jni/invizible/util.c.o -c /home/hex/InviZible-Night/tordnscrypt/src/main/jni/invizible/util.c",
+  "file": "/home/hex/InviZible-Night/tordnscrypt/src/main/jni/invizible/util.c"
+}
+]

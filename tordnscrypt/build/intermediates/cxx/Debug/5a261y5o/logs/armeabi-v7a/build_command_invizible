@@ -1,0 +1,4 @@
+/home/hex/Android/Sdk/cmake/3.22.1/bin/ninja \
+  -C \
+  /home/hex/InviZible-Night/tordnscrypt/.cxx/Debug/5a261y5o/armeabi-v7a \
+  invizible

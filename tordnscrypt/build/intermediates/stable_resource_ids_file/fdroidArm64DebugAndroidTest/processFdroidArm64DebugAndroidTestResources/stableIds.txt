@@ -1,0 +1,4 @@
+com.yogannnn.invizible.night.test:style/WhiteBackgroundDialogTheme = 0x7f020000
+com.yogannnn.invizible.night.test:style/WhiteBackgroundTheme = 0x7f020001
+com.yogannnn.invizible.night.test:string/package_name = 0x7f010001
+com.yogannnn.invizible.night.test:string/appProcVersion = 0x7f010000

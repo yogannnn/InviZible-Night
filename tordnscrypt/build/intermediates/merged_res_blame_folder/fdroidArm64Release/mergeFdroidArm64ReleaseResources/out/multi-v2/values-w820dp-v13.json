@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "pan.alexander.tordnscrypt-mergeFdroidArm64ReleaseResources-53:/values-w820dp-v13/values-w820dp-v13.xml",
+            "map": [
+                {
+                    "source": "/home/hex/InviZible-Night/android-filepicker/filepicker/build/intermediates/packaged_res/release/packageReleaseResources/values-w820dp-v13/values-w820dp-v13.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,101,148,195",
+                        "endColumns": "45,46,46,51",
+                        "endOffsets": "96,143,190,242"
+                    }
+                }
+            ]
+        }
+    ]
+}

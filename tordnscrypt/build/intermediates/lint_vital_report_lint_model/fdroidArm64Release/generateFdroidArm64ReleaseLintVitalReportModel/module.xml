@@ -1,0 +1,19 @@
+<lint-module
+    format="1"
+    dir="/home/hex/InviZible-Night/tordnscrypt"
+    name=":tordnscrypt"
+    type="APP"
+    maven="InviZible-Night:tordnscrypt:unspecified"
+    agpVersion="9.0.0"
+    buildFolder="build"
+    bootClassPath="/home/hex/Android/Sdk/platforms/android-37.0/android.jar:/home/hex/Android/Sdk/build-tools/36.0.0/core-lambda-stubs.jar"
+    javaSourceLevel="17"
+    compileTarget="android-37"
+    highlightGradualR8Api="false">
+  <lintOptions
+      abortOnError="true"
+      absolutePaths="true"
+      checkReleaseBuilds="true"
+      explainIssues="true"/>
+  <variant name="fdroidArm64Release"/>
+</lint-module>

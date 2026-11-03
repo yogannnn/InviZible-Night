@@ -1,3 +1,5 @@
+import java.util.Properties // <--- ДОБАВЛЕНО
+import java.io.FileInputStream // <--- ДОБАВЛЕНО
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
@@ -5,6 +7,13 @@ plugins {
     id 'kotlin-android'
     id 'com.google.devtools.ksp'
     id "kotlin-parcelize"
+}
+
+// <--- ДОБАВЛЕНО: Чтение локальных ключей (если есть) --->
+def keystorePropertiesFile = rootProject.file("keystore.properties")
+def keystoreProperties = new Properties()
+if (keystorePropertiesFile.exists()) {
+    keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
 }
 
 android {
@@ -17,7 +26,7 @@ android {
     productFlavors {
 
         fdroid {
-            applicationId "pan.alexander.tordnscrypt.stable"
+            applicationId "com.yogannnn.invizible.night" // Ваше имя пакета
             versionName "7.6.0"
             dimension = 'version'
             resValue 'string', 'package_name', applicationId
@@ -77,10 +86,31 @@ android {
         vectorDrawables.useSupportLibrary = true
     }
 
+    // <--- ДОБАВЛЕНО: Настройка подписи --->
+    signingConfigs {
+        release {
+            if (System.getenv("CI")) { // Для GitHub Actions
+                storeFile file("release-key.jks")
+                storePassword System.getenv("KEYSTORE_PASSWORD")
+                keyAlias System.getenv("KEY_ALIAS")
+                keyPassword System.getenv("KEY_PASSWORD")
+            } else {
+                // Для локальной сборки (если создадите keystore.properties)
+                if (keystorePropertiesFile.exists()) {
+                    storeFile file(keystoreProperties['storeFile'])
+                    storePassword keystoreProperties['storePassword']
+                    keyAlias keystoreProperties['keyAlias']
+                    keyPassword keystoreProperties['keyPassword']
+                }
+            }
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled true
             shrinkResources true
+            signingConfig signingConfigs.release // <--- ДОБАВЛЕНО
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
@@ -182,4 +212,7 @@ dependencies {
     ksp "com.google.dagger:dagger-compiler:$dagger_version"
     //Persistent Work Manager
     implementation "androidx.work:work-runtime-ktx:$work_version"
+
+    //Multidex
+    debugImplementation "androidx.multidex:multidex:$multidex_version"
 }

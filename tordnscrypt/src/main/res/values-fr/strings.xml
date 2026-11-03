@@ -40,8 +40,8 @@
     <string name="premium">"Version Premium"</string>
     <string name="agree">"J'approuve"</string>
     <string name="disagree">"Je désapprouve"</string>
-    <string name="message_no_root_used">"Vous pouvez utiliser InviZible Pro en mode VPN local, ou des applications avec leurs propre mandataire ou via la fonction VPN locale en mode proxy."</string>
-    <string name="message_no_root_used_kitkat">"Vous pouvez utiliser InviZible Pro avec des applications ayant leurs propre mandataire ou avec la fonction VPN locale en mode proxy."</string>
+    <string name="message_no_root_used">"Vous pouvez utiliser InviZible Night en mode VPN local, ou des applications avec leurs propre mandataire ou via la fonction VPN locale en mode proxy."</string>
+    <string name="message_no_root_used_kitkat">"Vous pouvez utiliser InviZible Night avec des applications ayant leurs propre mandataire ou avec la fonction VPN locale en mode proxy."</string>
     <string name="write_file_error">"Erreur de sauvegarde du fichier!"</string>
     <string name="drawer_menu_commonSettings">"Paramètres Communs"</string>
     <string name="drawer_menu_DNSSettings">"Paramètres de DNSCrypt"</string>
@@ -103,7 +103,7 @@
     <string name="pref_fast_block_http_summ">"Refuser la connexion au port http 80"</string>
     <string name="pref_fast_categ_update">"Mise à Jour"</string>
     <string name="pref_fast_auto_update">Mises à jour automatiques</string>
-    <string name="pref_fast_auto_update_summ">Vérifier quotidiennement les versions d\'InviZible Pro et de ses modules</string>
+    <string name="pref_fast_auto_update_summ">Vérifier quotidiennement les versions d\'InviZible Night et de ses modules</string>
     <string name="pref_fast_chek_update">Vérifier les mises à jour</string>
     <string name="pref_fast_chek_update_summ">"Vérifier immédiatement si de nouvelles versions sont disponibles"</string>
     <string name="pref_fast_through_tor_update">"Mettre à jour uniquement via Tor"</string>
@@ -122,7 +122,7 @@
     <string name="pref_common_wakelock_summ">Ne pas laisser l\'appareil passer en mode veille. Peut être utile lors de l\'utilisation de Point d\'accès. Peut décharger la batterie !</string>
     <string name="pref_common_show_help">"Messages d'aide"</string>
     <string name="pref_common_show_help_summ">Afficher tous les messages qui ont été marqués comme non autorisés à être affichés</string>
-    <string name="pref_common_notification_helper">"Veuillez exclure InviZible Pro de l\'optimisation de la batterie d\'Android. Sinon, le système tuera les services DNSCrypt, Tor ou I2P à n\'importe quel moment. Sur les systèmes spécifiques, comme MIUI, cela nécessite quelques mesures supplémentaires"</string>
+    <string name="pref_common_notification_helper">"Veuillez exclure InviZible Night de l\'optimisation de la batterie d\'Android. Sinon, le système tuera les services DNSCrypt, Tor ou I2P à n\'importe quel moment. Sur les systèmes spécifiques, comme MIUI, cela nécessite quelques mesures supplémentaires"</string>
     <string name="pref_common_use_busybox">"Sélectionnez BusyBox"</string>
     <string name="pref_common_categ_hotspot">"POINT D'ACCÈS-Expérimental"</string>
     <string name="pref_common_tethering_autostart">Démarrer le partage au démarrage</string>
@@ -297,12 +297,12 @@
     <string name="update_core_yes">"Mise à Jour"</string>
     <string name="update_core_no">"Plus tard"</string>
     <string name="update_core_not_show_again">"Ne pas demander à nouveau"</string>
-    <string name="update_core_restart">"Veuillez redémarrer InviZible Pro et autoriser l'installation complète!         Après l'installation, reconfigurez POINT D'ACCÈS, si vous l'utilisez!"</string>
+    <string name="update_core_restart">"Veuillez redémarrer InviZible Night et autoriser l'installation complète!         Après l'installation, reconfigurez POINT D'ACCÈS, si vous l'utilisez!"</string>
     <string name="update_notification">"Téléchargement du fichier"</string>
     <string name="update_interrupt_notification">"Le téléchargement a été arrêté"</string>
     <string name="cancel_download">"ANNULER LE TÉLÉCHARGEMENT"</string>
     <string name="update_new_version">"Nouvelle Version:"</string>
-    <string name="update_ipro_has_apdate">"Une mise à jour d'InviZible Pro est disponible. Voulez-vous la télécharger et l'effectuer? La mise à jour se poursuivra en arrière-plan."</string>
+    <string name="update_ipro_has_apdate">"Une mise à jour d'InviZible Night est disponible. Voulez-vous la télécharger et l'effectuer? La mise à jour se poursuivra en arrière-plan."</string>
     <string name="update_dnscrypt_has_apdate">"Une mise à jour de DNSCrypt est disponible. Voulez-vous la télécharger et l'effectuer? La mise à jour se poursuivra en arrière-plan."</string>
     <string name="update_tor_has_apdate">"Une mise à jour de Tor est disponible. Voulez-vous la télécharger et l'effectuer? La mise à jour se poursuivra en arrière-plan."</string>
     <string name="update_itpd_has_apdate">"Une mise à jour de Purple I2P est disponible. Voulez-vous la télécharger et l'effectuer? La mise à jour se poursuivra en arrière-plan."</string>
@@ -317,15 +317,15 @@
     <string name="update_installed">"Des mises à jour ont été installées."</string>
     <string name="update_over_three_activations">"Il semble que vous ayez déjà activé 3 copies d'InviZible avec ce code. Si ce n'est pas le cas, veuillez contacter le développeur."</string>
     <string name="update_wrong_code">"Il semble que votre code PRO soit erroné. Veuillez contacter le développeur."</string>
-    <string name="update_over_five_times">"Vous avez vérifié les mises à jour d'InviZible Pro plus de 5 fois par jour. Veuillez réessayer plus tard."</string>
+    <string name="update_over_five_times">"Vous avez vérifié les mises à jour d'InviZible Night plus de 5 fois par jour. Veuillez réessayer plus tard."</string>
     <string name="verifier_error">"On dirait une version non officielle d'InviZible. Veuillez faire attention avec!"</string>
     <string name="only_for_pro">"Uniquement pour la version PRO"</string>
     <string name="donate">"Contribuer"</string>
-    <string name="donate_project">Le projet InviZible Pro cherche de l\'aide. Veuillez visiter la page de don ou saisir le code premium que vous avez déjà reçu.</string>
+    <string name="donate_project">Le projet InviZible Night cherche de l\'aide. Veuillez visiter la page de don ou saisir le code premium que vous avez déjà reçu.</string>
     <string name="donate_button">"Visiter"</string>
     <string name="enter_code_button">"Entrez le code"</string>
     <string name="enter_code">"Entrez le Code"</string>
-    <string name="thanks_for_donate">"Le Projet InviZible Pro et son auteur vous expriment leur reconnaissance
+    <string name="thanks_for_donate">"Le Projet InviZible Night et son auteur vous expriment leur reconnaissance
                 pour l'assistance. Souhaitez-vous télécharger et mettre à jour la version PRO? La mise à jour se poursuivra en arrière-plan."</string>
     <string name="pref_dnscrypt_relays_summ">"Listes distantes des relais disponibles."</string>
     <string name="vpn_mode_active">"Le mode VPN est actif"</string>
@@ -339,15 +339,15 @@
     <string name="add_custom_server_title">"Ajouter un serveur personnalisé"</string>
     <string name="add_custom_server_error">"Configuration du serveur personnalisée non valide. Veuillez vérifier le champ SDNS."</string>
     <string name="pending_purchase">"Veuillez noter que vous avez un achat en attente:"</string>
-    <string name="buy_premium_gp">Le Projet InviZible Pro cherche de l\'aide. Appuyez sur OK pour acheter les fonctionnalités premium.</string>
+    <string name="buy_premium_gp">Le Projet InviZible Night cherche de l\'aide. Appuyez sur OK pour acheter les fonctionnalités premium.</string>
     <string name="wrong_purchase_signature_gp">"Désolé, mais il est impossible de confirmer votre achat. Vous serez remboursé au bout de 3 jours."</string>
     <string name="only_premium_feature">"Malheureusement, cette fonctionnalité n'est disponible que dans la version premium."</string>
     <string name="agreement_text">
-        \tMerci d\'avoir choisi InviZible Pro. J\'espère qu\'il vous sera utile pour le respect de votre vie privée et une utilisation confortable d\'Internet.
-        \n\n\tInviZible Pro inclut Tor, DNSCrypt et Purple I2P comme modules.
-        \n\n\tInviZible Pro peut utiliser root, si votre appareil possède des privilèges root, ou utiliser un RPV local pour acheminer le trafic Internet vers les réseaux Tor, DNSCrypt et I2P.
+        \tMerci d\'avoir choisi InviZible Night. J\'espère qu\'il vous sera utile pour le respect de votre vie privée et une utilisation confortable d\'Internet.
+        \n\n\tInviZible Night inclut Tor, DNSCrypt et Purple I2P comme modules.
+        \n\n\tInviZible Night peut utiliser root, si votre appareil possède des privilèges root, ou utiliser un RPV local pour acheminer le trafic Internet vers les réseaux Tor, DNSCrypt et I2P.
         \n\n\tPolitique de confidentialité:
-        \n\tInviZible Pro ne collecte ni ne partage aucune donnée personnelle ou sensible des utilisateurs.
+        \n\tInviZible Night ne collecte ni ne partage aucune donnée personnelle ou sensible des utilisateurs.
         \n\tCopyright © 2019-2026
         \n\tOleksandr Garmatin
         \n\tinvizible.soft@gmail.com
@@ -364,7 +364,7 @@
     <string name="pref_tor_edit_conf">"Modifier directement tor.conf"</string>
     <string name="pref_itpd_edit_conf">"Modifier directement i2pd.conf"</string>
     <string name="pref_itpd_edit_tunnels">"Modifier directement tunnels.conf"</string>
-    <string name="config_changes_dialog_message">"Voulez-vous enregistrer les modifications? Cela peut casser InviZible Pro."</string>
+    <string name="config_changes_dialog_message">"Voulez-vous enregistrer les modifications? Cela peut casser InviZible Night."</string>
     <string name="pref_dnscrypt_ipv4_servers_summ">"Utiliser des serveurs accessibles via l'IPv4"</string>
     <string name="pref_dnscrypt_ipv6_servers_summ">"Utiliser des serveurs accessibles via l'IPv6"</string>
     <string name="pref_dnscrypt_import_forwarding_rules">"Importer les règles de réacheminement"</string>
@@ -400,7 +400,7 @@
     <string name="pref_common_arp_block_internet_summ">"La connexion Internet sera bloquée pendant une attaque"</string>
     <string name="pref_common_proxy_categ">"Mandataire (Proxy)"</string>
     <string name="pref_common_proxy">"Utiliser un mandataire socks5"</string>
-    <string name="pref_common_proxy_summ">"InviZible Pro établira toutes les connexions via le mandataire SOCKS5"</string>
+    <string name="pref_common_proxy_summ">"InviZible Night établira toutes les connexions via le mandataire SOCKS5"</string>
     <string name="pref_common_compatibility_mode">"Mode compatibilité"</string>
     <string name="pref_common_compatibility_mode_summ">Activer si votre appareil utilisant une rom personnalisée perd sa connexion lorsque vous appuyez sur le bouton DÉMARRER</string>
     <string name="pref_common_shell_control">"Activer le contrôle de script"</string>
@@ -480,7 +480,7 @@
     <string name="btnResetSettings">"Réinitialiser les paramètres"</string>
     <string name="backupSaved">"Sauvegarde enregistré"</string>
     <string name="backupRestored">"Sauvegarde restauré"</string>
-    <string name="thanks_for_donate_gp">"Le Projet InviZible Pro et son auteur vous expriment leur reconnaissance pour l'assistance."</string>
+    <string name="thanks_for_donate_gp">"Le Projet InviZible Night et son auteur vous expriment leur reconnaissance pour l'assistance."</string>
     <string name="pref_tor_hardware_accel_summ">"Essayez d'utiliser l'accélération matérielle cryptographique intégrée lorsqu'elle est disponible."</string>
     <string name="notification_connecting">"Connexion…"</string>
     <string name="notification_waiting_network">"En attente du réseau…"</string>
@@ -532,9 +532,9 @@
     <string name="long_press_to_add">Appui long pour ajouter.</string>
     <string name="pref_dnscrypt_odoh_servers_summ">Utilisez des serveurs exécutant le protocole Oblivious DNS-over-HTTPS.</string>
     <string name="pref_tor_track_host_exits_summ">Tor suivra les connexions récentes aux hôtes et tentera de réutiliser le même nœud de sortie pour chacun. Cette option peut aider à éviter un captcha sans fin.</string>
-    <string name="pref_common_always_on_vpn_summ">Activez le VPN permanent et bloquez les connexions sans VPN pour InviZible Pro afin de bloquer Internet lorsque l\'application n\'est pas en cours d\'exécution</string>
+    <string name="pref_common_always_on_vpn_summ">Activez le VPN permanent et bloquez les connexions sans VPN pour InviZible Night afin de bloquer Internet lorsque l\'application n\'est pas en cours d\'exécution</string>
     <string name="pref_dnscrypt_rules_delay_summ">Les règles seront mises à jour après le délai spécifié en heures.</string>
-    <string name="ask_reset_settings_text">Impossible de démarrer InviZible Pro %1$s ! Veuillez essayer de réinitialiser les paramètres de %2$s. Si cela ne résout pas le problème, veuillez redémarrer votre appareil.</string>
+    <string name="ask_reset_settings_text">Impossible de démarrer InviZible Night %1$s ! Veuillez essayer de réinitialiser les paramètres de %2$s. Si cela ne résout pas le problème, veuillez redémarrer votre appareil.</string>
     <string name="press_to_add">Pressez pour ajouter.</string>
     <string name="pref_itpd_use_HTTP_outproxy_summ">Passerelle vers Internet régulier</string>
     <string name="pref_itpd_HTTP_outproxy_address_summ">Proxy HTTP en amont sur l\'URL du proxy (comme http://false.i2p)</string>

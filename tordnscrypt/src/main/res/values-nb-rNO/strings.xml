@@ -30,7 +30,7 @@
     <string name="discard_changes">Forkast endringer</string>
     <string name="allow">Tillat</string>
     <string name="areYouSure">Utfør denne handlingen permanent\?</string>
-    <string name="message_no_root_used">Du kan bruke InviZible Pro med lokalt VPN-modus, eller programmet med egen mellomtjener, eller VPN-funksjoner i mellomtjenermodus.</string>
+    <string name="message_no_root_used">Du kan bruke InviZible Night med lokalt VPN-modus, eller programmet med egen mellomtjener, eller VPN-funksjoner i mellomtjenermodus.</string>
     <string name="pref_fast_autostart_delay_summ">Antall sekunder forsinkelse å bruke hvis auto-start ikke fungerer.</string>
     <string name="drawer_menu_commonSettings">Generelle innstillinger</string>
     <string name="drawer_menu_DNSSettings">DNSCrypt-innstillinger</string>
@@ -244,12 +244,12 @@
     <string name="pref_dnscrypt_require_servers_categ">Krev tjenere (fra statisk + kilder annensteds hen) for å oppfylle gitte egenskaper.</string>
     <string name="pref_tor_enable_SOCKS_proxy">Skru på SOCKS-mellomtjener</string>
     <string name="pref_itpd_com_use_ntcpproxy">Skru på ntcpproxy</string>
-    <string name="message_no_root_used_kitkat">Du kan bruke InviZible Pro med programmer med din egen mellomtjener, eller lokale VPN-funksjon i mellomtjenermodus.</string>
+    <string name="message_no_root_used_kitkat">Du kan bruke InviZible Night med programmer med din egen mellomtjener, eller lokale VPN-funksjon i mellomtjenermodus.</string>
     <string name="pref_fast_use_tor_bridges_obfs">Tildekking</string>
     <string name="pref_fast_use_tor_bridges_alt_summ">Skru av inngangsnoder i Tor-innstillingene. Ellers kan du ikke bruke broer.</string>
     <string name="pref_fast_use_tor_bridges_transport_select">Velg tildekkingsmodus</string>
     <string name="pref_common_arp_spoofing_detection">Oppdagelse av ARP-lurendreieri</string>
-    <string name="pref_fast_auto_update_summ">Sjekk InviZible Pro og moduloppgraderinger daglig</string>
+    <string name="pref_fast_auto_update_summ">Sjekk InviZible Night og moduloppgraderinger daglig</string>
     <string name="pref_fast_categ_update">Oppgrader</string>
     <string name="pref_fast_auto_update">Automatiske oppgraderinger</string>
     <string name="pref_common_arp_spoofing_detection_summ">Oppdag mann-i-midten-ARP-lurendreieri og ondsinnede DHCP-angrep i Wi-Fi-nettverk.</string>
@@ -310,8 +310,8 @@
     <string name="pref_common_excludes_from_tor_summ">En liste over nettside å åpne direkte for HOTSPOT</string>
     <string name="pref_common_unblock_with_tor_summ">En liste over nettside å åpne med Tor for HOTSPOT</string>
     <string name="action_mode_hotspot">HOTSPOT</string>
-    <string name="update_core_restart">Start InviZible Pro på ny og tillat full installasjon. Etter det kan du sette opp HOTSPOT, hvis du bruker det.</string>
-    <string name="pref_common_notification_helper">Utelat InviZible Pro fra Android-batterioptimalisering. Ellers kan Android drepe DNSCrypt, Tor, eller I2P når som helst. På spesielle systemer, som MIUI kreves ytterligere steg.</string>
+    <string name="update_core_restart">Start InviZible Night på ny og tillat full installasjon. Etter det kan du sette opp HOTSPOT, hvis du bruker det.</string>
+    <string name="pref_common_notification_helper">Utelat InviZible Night fra Android-batterioptimalisering. Ellers kan Android drepe DNSCrypt, Tor, eller I2P når som helst. På spesielle systemer, som MIUI kreves ytterligere steg.</string>
     <string name="pref_common_notification_summ">Beskytt programmer med «modus for manglende rot-tilgang» for å forhindre at programmet drepes av Android.</string>
     <string name="pref_common_excludes_from_tor">Utelatte nettsider</string>
     <string name="pref_common_fix_ttl_summ">TTL vil bli fastsatt til 64 ved bruk av en lokal VPN. Kjernestøtte kreves ikke. Det kan kun brukes i «rot-modus», med «Kjør moduler med rot-tilgang»-innstillingen avksrudd. For å fastsette TTL kan du starte DNSCrypt, eller/og Tor.</string>

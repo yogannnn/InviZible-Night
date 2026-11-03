@@ -47,7 +47,7 @@
     <string name="agree">"می‌پذیرم"</string>
     <string name="disagree">"نمی‌پذیرم"</string>
     <string name="message_no_root_used">شما می‌توانید با استفاده از InviZible Pro تمام دستگاه خود را در حالت VPN تونل کنید، یا در حالت پروکسی داخلی در برنامه‌ها استفاده کنید.</string>
-    <string name="message_no_root_used_kitkat">"شما می‌توانید از برنامه‌های دارای پراکسی و VPN داخلی، روی InviZible Pro در حالت پراکسی استفاده کنید."</string>
+    <string name="message_no_root_used_kitkat">"شما می‌توانید از برنامه‌های دارای پراکسی و VPN داخلی، روی InviZible Night در حالت پراکسی استفاده کنید."</string>
     <!-- مشکل در ذخیره‌ی فایل -->
     <string name="write_file_error">"مشکل در ذخیره فایل!"</string>
     <string name="drawer_menu_commonSettings">"تنظیمات عمومی"</string>
@@ -115,7 +115,7 @@
     <string name="pref_fast_block_http_summ">"مسدودسازی ارتباط با HTTP Port 80"</string>
     <string name="pref_fast_categ_update">"بروزرسانی"</string>
     <string name="pref_fast_auto_update">به روزرسانی خودکار</string>
-    <string name="pref_fast_auto_update_summ">به روزرسانی‌های InviZible Pro و ماژول‌ها را روزانه بررسی کنید</string>
+    <string name="pref_fast_auto_update_summ">به روزرسانی‌های InviZible Night و ماژول‌ها را روزانه بررسی کنید</string>
     <string name="pref_fast_chek_update">بررسی به روزرسانی</string>
     <string name="pref_fast_chek_update_summ">"بررسی کنید نسخه‌های جدید اکنون موجود هستند یا خیر"</string>
     <string name="pref_fast_through_tor_update">"مؤکداً انجام بروزرسانی‌ها از طریق TOR"</string>
@@ -134,7 +134,7 @@
     <string name="pref_common_wakelock_summ">حفاظت بیش‌تر بدون حالت روت برای جلوگیری از توقف برنامه توسط اندروید. ممکن است باعث تخلیه زودتر باتری شود!</string>
     <string name="pref_common_show_help">"راهنمایی‌ها"</string>
     <string name="pref_common_show_help_summ">همیشه پیغام‌ های راهنما را نشان بده</string>
-    <string name="pref_common_notification_helper">لطفاً InviZible Pro را از بهینه‌سازی باتری اندروید استثناء کنید تا سیستم در هر زمانی DNSCrypt، تور، یا I2P را خاتمه ندهد. برخی از سیستم های خاص، مانند MIUI، ممکن است به مراحل اضافی نیاز داشته باشند.</string>
+    <string name="pref_common_notification_helper">لطفاً InviZible Night را از بهینه‌سازی باتری اندروید استثناء کنید تا سیستم در هر زمانی DNSCrypt، تور، یا I2P را خاتمه ندهد. برخی از سیستم های خاص، مانند MIUI، ممکن است به مراحل اضافی نیاز داشته باشند.</string>
     <string name="pref_common_use_busybox">"انتخاب BusyBox"</string>
     <string name="pref_common_categ_hotspot">"هات اسپات-آزمایشی"</string>
     <string name="pref_common_tethering_autostart">شروع اشتراک گذاری هنگام بوت</string>
@@ -316,12 +316,12 @@
     <string name="update_core_no">"بعداً"</string>
     <!-- مجدد سوال نکنید -->
     <string name="update_core_not_show_again">"مجدداً پرسیده نشود"</string>
-    <string name="update_core_restart">"لطفا InviZible Pro را مجدداً راه‌اندازی نمایید و اجازه دهید تا کاملاً نصب شود! بعد از نصب اگر از هات‌اسپات استفاده می‌نمایید، آن را مجدداً تنظیم نمایید!"</string>
+    <string name="update_core_restart">"لطفا InviZible Night را مجدداً راه‌اندازی نمایید و اجازه دهید تا کاملاً نصب شود! بعد از نصب اگر از هات‌اسپات استفاده می‌نمایید، آن را مجدداً تنظیم نمایید!"</string>
     <string name="update_notification">"در حال دانلود فایل"</string>
     <string name="update_interrupt_notification">"دانلود متوقف شد"</string>
     <string name="cancel_download">"لغو کردن دانلود"</string>
     <string name="update_new_version">"نسخه جدید:"</string>
-    <string name="update_ipro_has_apdate">"آپدیت InviZible Pro در دسترس است. آیا می‌خواهید آن را دانلود و آپدیت نمایید؟ آپدیت در پس‌زمینه ادامه خواهد داشت."</string>
+    <string name="update_ipro_has_apdate">"آپدیت InviZible Night در دسترس است. آیا می‌خواهید آن را دانلود و آپدیت نمایید؟ آپدیت در پس‌زمینه ادامه خواهد داشت."</string>
     <string name="update_dnscrypt_has_apdate">"آپدیت DNSCrypt در دسترس است. آیا می‌خواهید آن را دانلود و آپدیت نمایید؟ آپدیت در پس‌زمینه ادامه خواهد داشت."</string>
     <string name="update_tor_has_apdate">"آپدیت TOR در دسترس است. آیا می‌خواهید آن را دانلود و آپدیت نمایید؟ آپدیت در پس‌زمینه ادامه خواهد داشت."</string>
     <string name="update_itpd_has_apdate">"آپدیت Purple I2P در دسترس است. آیا می‌خواهید آن را دانلود و آپدیت نمایید؟ آپدیت در پس‌زمینه ادامه خواهد داشت."</string>
@@ -336,7 +336,7 @@
     <string name="update_installed">"بروزرسانی نصب شد."</string>
     <string name="update_over_three_activations">به نظر می‌رسد شما ۳ نسخه از InviZible را با این کد فعال کرده‌اید. درغیر این صورت، با توسعه‌دهنده تماس بگیرید.</string>
     <string name="update_wrong_code">"کد نسخه PRO شما اشتباه است. با توسعه‌دهنده تماس بگیرید."</string>
-    <string name="update_over_five_times">"شما بروزرسانی‌های InviZible Pro را بیش از ۵ بار در روز بررسی کرده‌اید. لطفا بعداً مجدداً سعی نمایید."</string>
+    <string name="update_over_five_times">"شما بروزرسانی‌های InviZible Night را بیش از ۵ بار در روز بررسی کرده‌اید. لطفا بعداً مجدداً سعی نمایید."</string>
     <string name="verifier_error">"به نظر می‌رسد این نسخه غیررسمی از InviZible است. لطفاً مراقب آن باشید!"</string>
     <string name="only_for_pro">"فقط برای نسخه PRO"</string>
     <string name="donate">"کمک مالی"</string>
@@ -344,7 +344,7 @@
     <string name="donate_button">"بازدید"</string>
     <string name="enter_code_button">"کد را وارد کنید"</string>
     <string name="enter_code">"کد را وارد کنید"</string>
-    <string name="thanks_for_donate">"پروژه InviZible Pro و سازنده آن از کمک‌ها قدردانی می‌کنند. آیا می‌خواهید PRO را دانلود و بروزرسانی کنید؟ بروزرسانی در پس زمینه ادامه خواهد یافت."</string>
+    <string name="thanks_for_donate">"پروژه InviZible Night و سازنده آن از کمک‌ها قدردانی می‌کنند. آیا می‌خواهید PRO را دانلود و بروزرسانی کنید؟ بروزرسانی در پس زمینه ادامه خواهد یافت."</string>
     <string name="pref_dnscrypt_relays_summ">"لیست‌های ریموت از رله‌های موجود."</string>
     <string name="vpn_mode_active">"حالت VPN فعال است"</string>
     <string name="vpn_mode_off">"حالت VPN خاموش است"</string>
@@ -407,7 +407,7 @@
     <string name="pref_common_arp_block_internet_summ">"اتصال اینترنت در هنگام حمله مسدود خواهد شد"</string>
     <string name="pref_common_proxy_categ">"پروکسی"</string>
     <string name="pref_common_proxy">"از پروکسی socks5 استفاده کنید"</string>
-    <string name="pref_common_proxy_summ">"اپلیکیشن InviZible Pro تمام ارتباطات را از طریق پروکسی SOCKS5 برقرار می کند"</string>
+    <string name="pref_common_proxy_summ">"اپلیکیشن InviZible Night تمام ارتباطات را از طریق پروکسی SOCKS5 برقرار می کند"</string>
     <string name="pref_common_compatibility_mode">"حالت سازگاری"</string>
     <string name="pref_common_compatibility_mode_summ">اگر روی گوشی موبایل خود کاستوم‌ رام نصب کرده‌اید و با فشار دادن دکمه شروع، اتصال قطع میشود، آن را فعال کنید</string>
     <string name="pref_common_shell_control">"کنترل اسکریپت را فعال کنید"</string>
@@ -563,11 +563,11 @@
     <string name="pref_dnscrypt_odoh_servers_summ">از سرورهایی استفاده کنید که پروتکل Oblivious DNS-over-HTTPS را پیاده سازی می کنند.</string>
     <string name="long_press_to_edit">برای ویرایش طولانی فشار دهید.</string>
     <string name="pref_tor_nodes_categ">گره ها</string>
-    <string name="ask_reset_settings_text">InviZible Pro نمی تواند %1$s را شروع کند! لطفاً تنظیمات %2$s را بازنشانی کنید. اگر کمکی نکرد، لطفاً دستگاه خود را راه اندازی مجدد کنید.</string>
+    <string name="ask_reset_settings_text">InviZible Night نمی تواند %1$s را شروع کند! لطفاً تنظیمات %2$s را بازنشانی کنید. اگر کمکی نکرد، لطفاً دستگاه خود را راه اندازی مجدد کنید.</string>
     <string name="helper_tor_check_proxy">شما برای استفاده از پراکسی Socks5 پیکربندی کرده اید، اما به نظر می رسد که پروکسی در حال اجرا نیست. لطفا تنظیمات خود را بررسی کنید!</string>
     <string name="proxy_use_for_non_tor">از پروکسی برای برنامه‌هایی که تور را دور می‌زنند استفاده کنید</string>
     <string name="dns_rule_add_rule">افزودن قانون</string>
-    <string name="pref_common_always_on_vpn_summ">فعال کردن فیلترشکن همیشه روشن و مسدود کردن اتصالات بدون فیلترشکن برای InviZible Pro برای مسدود کردن اینترنت در زمانی که برنامه در حال اجرا نیست</string>
+    <string name="pref_common_always_on_vpn_summ">فعال کردن فیلترشکن همیشه روشن و مسدود کردن اتصالات بدون فیلترشکن برای InviZible Night برای مسدود کردن اینترنت در زمانی که برنامه در حال اجرا نیست</string>
     <string name="pref_dnscrypt_rules_delay_summ">قوانین پس از تاخیر مشخص شده در ساعت به روز می شوند.</string>
     <string name="dns_rule_replace_remote_list">جایگزینی لیست راه دور</string>
     <string name="dns_rule_add_remote_list">افزودن لیست راه دور</string>

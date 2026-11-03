@@ -41,8 +41,8 @@
     <string name="premium">"Έκδοση Premium"</string>
     <string name="agree">"Συμφωνώ"</string>
     <string name="disagree">"Διαφωνώ"</string>
-    <string name="message_no_root_used">"Μπορείτε να χρησιμοποιήσετε το InviZible Pro με τοπική λειτουργία VPN ή εφαρμογές με δικό τους διακομιστή μεσολάβησης ή με τοπική λειτουργία VPN ως διακομιστή μεσολάβησης."</string>
-    <string name="message_no_root_used_kitkat">"Μπορείτε να χρησιμοποιήσετε το InviZible Pro με εφαρμογές με δικό τους διακομιστή μεσολάβησης ή με τοπική λειτουργία VPN ως διακομιστή μεσολάβησης."</string>
+    <string name="message_no_root_used">"Μπορείτε να χρησιμοποιήσετε το InviZible Night με τοπική λειτουργία VPN ή εφαρμογές με δικό τους διακομιστή μεσολάβησης ή με τοπική λειτουργία VPN ως διακομιστή μεσολάβησης."</string>
+    <string name="message_no_root_used_kitkat">"Μπορείτε να χρησιμοποιήσετε το InviZible Night με εφαρμογές με δικό τους διακομιστή μεσολάβησης ή με τοπική λειτουργία VPN ως διακομιστή μεσολάβησης."</string>
     <string name="write_file_error">"Σφάλμα αποθήκευσης αρχείου!"</string>
     <string name="drawer_menu_commonSettings">"Κοινές Ρυθμίσεις"</string>
     <string name="drawer_menu_DNSSettings">"Ρυθμίσεις DNSCrypt"</string>
@@ -113,7 +113,7 @@ Should it be named instead "Βασικές Ρυθμίσεις" (originating from
     <string name="pref_fast_block_http_summ">"Άρνηση σύνδεσης στη θύρα http 80"</string>
     <string name="pref_fast_categ_update">"Ενημέρωση"</string>
     <string name="pref_fast_auto_update">Αυτόματες ενημερώσεις</string>
-    <string name="pref_fast_auto_update_summ">Ελέγχετε καθημερινά τις ενημερώσεις του InviZible Pro και των προσθέτων</string>
+    <string name="pref_fast_auto_update_summ">Ελέγχετε καθημερινά τις ενημερώσεις του InviZible Night και των προσθέτων</string>
     <string name="pref_fast_chek_update">Ελεγχος ενημέρωσης</string>
     <string name="pref_fast_chek_update_summ">Ελέγξτε εάν υπάρχουν νέες διαθέσιμες εκδόσεις τώρα</string>
     <string name="pref_fast_through_tor_update">"Ενημέρωση αυστηρά μέσω Tor"</string>
@@ -133,7 +133,7 @@ Should it be named instead "Βασικές Ρυθμίσεις" (originating from
     <string name="pref_common_wakelock_summ">Μην αφήνετε τη συσκευή να πέσει σε κατάσταση νάρκης. Μπορεί να είναι χρήσιμο όταν χρησιμοποιείτε το HOTSPOT. Εξαντλεί την μπαταρία!</string>
     <string name="pref_common_show_help">"Βοηθητικά μηνύματα"</string>
     <string name="pref_common_show_help_summ">Εμφάνιση όλων των μηνυμάτων που έχουν επισημανθεί ως μη επιτρεπόμενα προς εμφάνιση</string>
-    <string name="pref_common_notification_helper">Παρακαλούμε αποκλείστε το InviZible Pro από τη βελτιστοποίηση της μπαταρίας του Android για να αποτρέψετε το σύστημα να τερματίσει το DNSCrypt, το Tor ή το I2P ανά πάσα στιγμή. Ορισμένα ειδικά συστήματα, όπως το MIUI, ενδέχεται να απαιτούν πρόσθετα βήματα.</string>
+    <string name="pref_common_notification_helper">Παρακαλούμε αποκλείστε το InviZible Night από τη βελτιστοποίηση της μπαταρίας του Android για να αποτρέψετε το σύστημα να τερματίσει το DNSCrypt, το Tor ή το I2P ανά πάσα στιγμή. Ορισμένα ειδικά συστήματα, όπως το MIUI, ενδέχεται να απαιτούν πρόσθετα βήματα.</string>
     <string name="pref_common_use_busybox">"Επιλογή BusyBox"</string>
     <string name="pref_common_categ_hotspot">"HOTSPOT-Πειραματικό"</string>
     <string name="pref_common_tethering_autostart">Έναρξη κοινής χρήσης κατά την εκκίνηση</string>
@@ -312,12 +312,12 @@ Should it be named instead "Βασικές Ρυθμίσεις" (originating from
     <string name="update_core_yes">"Ενημέρωση"</string>
     <string name="update_core_no">"Αργότερα"</string>
     <string name="update_core_not_show_again">"Μη ρωτήσεις ξανά"</string>
-    <string name="update_core_restart">"Κάντε επανεκκίνηση του InviZible Pro και επιτρέψτε την πλήρη εγκατάσταση! Μετά την εγκατάσταση, ρυθμίστε ξανά το HOTSPOT, εάν το χρησιμοποιήσετε!"</string>
+    <string name="update_core_restart">"Κάντε επανεκκίνηση του InviZible Night και επιτρέψτε την πλήρη εγκατάσταση! Μετά την εγκατάσταση, ρυθμίστε ξανά το HOTSPOT, εάν το χρησιμοποιήσετε!"</string>
     <string name="update_notification">"Λήψη αρχείου"</string>
     <string name="update_interrupt_notification">"Η λήψη διακόπηκε"</string>
     <string name="cancel_download">"ΑΚΥΡΩΣΗ ΛΗΨΗΣ"</string>
     <string name="update_new_version">"Νέα Εκδοση:"</string>
-    <string name="update_ipro_has_apdate">"Υπάρχει ενημέρωση InviZible Pro διαθέσιμη. Θέλετε να τη κατεβάσετε και να ενημερώσετε; Η ενημέρωση θα συνεχιστεί στο παρασκήνιο."</string>
+    <string name="update_ipro_has_apdate">"Υπάρχει ενημέρωση InviZible Night διαθέσιμη. Θέλετε να τη κατεβάσετε και να ενημερώσετε; Η ενημέρωση θα συνεχιστεί στο παρασκήνιο."</string>
     <string name="update_dnscrypt_has_apdate">"Υπάρχει ενημέρωση DNSCrypt διαθέσιμη. Θέλετε να τη κατεβάσετε και να ενημερώσετε; Η ενημέρωση θα συνεχιστεί στο παρασκήνιο."</string>
     <string name="update_tor_has_apdate">"Διαθέσιμη ενημέρωση Tor. Θα επιθυμούσατε να κάνετε λήψη και ενημέρωση; Η ενημέρωση θα συνεχίσει στο παρασκήνιο."</string>
     <string name="update_itpd_has_apdate">"Διαθέσιμη ενημέρωση Purple I2P. Θα επιθυμούσατε να κάνετε λήψη και ενημέρωση; Η ενημέρωση θα συνεχίσει στο παρασκήνιο."</string>
@@ -332,15 +332,15 @@ Should it be named instead "Βασικές Ρυθμίσεις" (originating from
     <string name="update_installed">"Οι ενημερώσεις εγκαταστάθηκαν."</string>
     <string name="update_over_three_activations">"Φαίνεται οτι ήδη ενεργοποιήσατε 3 αντίγραφα του InviZible με αυτό τον κωδικό. Εαν αυτό είναι λάθος, παρακαλώ επικοινωνήστε με τον προγραμματιστή."</string>
     <string name="update_wrong_code">"Φαίνεται ότι ο κωδικός PRO είναι λάθος. Επικοινωνήστε με τον προγραμματιστή."</string>
-    <string name="update_over_five_times">"Ελέγξατε για ενημερώσεις του InviZible Pro περισσότερες από 5 φορές την ημέρα. Παρακαλώ προσπάθησε ξανά αργότερα."</string>
+    <string name="update_over_five_times">"Ελέγξατε για ενημερώσεις του InviZible Night περισσότερες από 5 φορές την ημέρα. Παρακαλώ προσπάθησε ξανά αργότερα."</string>
     <string name="verifier_error">"Μοιάζει με αυτήν την ανεπίσημη έκδοση του InviZible. Παρακαλώ να το προσέχετε!"</string>
     <string name="only_for_pro">"Μόνο για έκδοση PRO"</string>
     <string name="donate">"Δωρεά"</string>
-    <string name="donate_project">Το InviZible Project χρειάζεται τη βοήθειά σας. Επισκεφτείτε τη σελίδα δωρεών ή εισαγάγετε τον κωδικό premium που λάβατε.</string>
+    <string name="donate_project">Το InviZible Nightject χρειάζεται τη βοήθειά σας. Επισκεφτείτε τη σελίδα δωρεών ή εισαγάγετε τον κωδικό premium που λάβατε.</string>
     <string name="donate_button">"Επισκεφτείτε"</string>
     <string name="enter_code_button">"Εισαγωγή Κωδικού"</string>
     <string name="enter_code">"Πληκτρολήστε Κωδικό"</string>
-    <string name="thanks_for_donate">"Το InviZible Project και ο προγραμματιστής του εκφράζουν την εκτίμηση τους για τη βοήθεια. Θέλετε να κάνετε λήψη και αναβάθμιση σε έκδοση PRO; Η ενημέρωση θα συνεχιστεί στο παρασκήνιο."</string>
+    <string name="thanks_for_donate">"Το InviZible Nightject και ο προγραμματιστής του εκφράζουν την εκτίμηση τους για τη βοήθεια. Θέλετε να κάνετε λήψη και αναβάθμιση σε έκδοση PRO; Η ενημέρωση θα συνεχιστεί στο παρασκήνιο."</string>
     <string name="pref_dnscrypt_relays_summ">"Απομακρυσμένες λίστες διαθέσιμων αναμεταδοτών."</string>
     <string name="vpn_mode_active">"Λειτουργία VPN ενεργή"</string>
     <string name="vpn_mode_off">"Λειτουργία VPN ανενεργή"</string>
@@ -353,15 +353,15 @@ Should it be named instead "Βασικές Ρυθμίσεις" (originating from
     <string name="add_custom_server_title">"Προσθήκη προσαρμοσμένου διακομιστή"</string>
     <string name="add_custom_server_error">"Μη έγκυρη προσαρμοσμένη διαμόρφωση διακομιστή. Ελέγξτε το πεδίο SDNS."</string>
     <string name="pending_purchase">"Λάβετε υπόψη ότι έχετε μια αγορά σε εκκρεμότητα:"</string>
-    <string name="buy_premium_gp">Το InviZible Pro Project χρειάζεται τη βοήθειά σας. Πατήστε OK για να αγοράσετε λειτουργίες μέσω έκδοσης premium.</string>
+    <string name="buy_premium_gp">Το InviZible Night Project χρειάζεται τη βοήθειά σας. Πατήστε OK για να αγοράσετε λειτουργίες μέσω έκδοσης premium.</string>
     <string name="wrong_purchase_signature_gp">"Λυπούμαστε, αλλά είναι αδύνατο να επιβεβαιώσετε την αγορά σας. Θα λάβετε επιστροφή χρημάτων μετά από 3 ημέρες."</string>
     <string name="only_premium_feature">"Δυστυχώς, αυτή η δυνατότητα είναι διαθέσιμη μόνο για την έκδοση premium."</string>
     <string name="agreement_text">
-        \tΕυχαριστούμε που επιλέξατε το InviZible Pro. Ελπίζω ότι θα είναι χρήσιμο για την ιδιωτικότητά σας και την άνετη χρήση του Διαδικτύου.
-        \n\n\tΤο InviZible Pro περιλαμβάνει το Tor, DNSCrypt και Purple I2P ως λειτουργικές μονάδες.
-        \n\n\tΤο InviZible Pro μπορεί να χρησιμοποιήσει δικαιώματα root, εάν η συσκευή σας έχει δικαιώματα root, ή χρησιμοποιεί ένα τοπικό VPN για να παρέχει κίνηση Διαδικτύου σε δίκτυα μέσω Tor, DNSCrypt και I2P.
+        \tΕυχαριστούμε που επιλέξατε το InviZible Night. Ελπίζω ότι θα είναι χρήσιμο για την ιδιωτικότητά σας και την άνετη χρήση του Διαδικτύου.
+        \n\n\tΤο InviZible Night περιλαμβάνει το Tor, DNSCrypt και Purple I2P ως λειτουργικές μονάδες.
+        \n\n\tΤο InviZible Night μπορεί να χρησιμοποιήσει δικαιώματα root, εάν η συσκευή σας έχει δικαιώματα root, ή χρησιμοποιεί ένα τοπικό VPN για να παρέχει κίνηση Διαδικτύου σε δίκτυα μέσω Tor, DNSCrypt και I2P.
         \n\n\tΠολιτική απορρήτου:
-        \n\tΤο InviZible Pro δεν συλλέγει ούτε κοινοποιεί προσωπικά ή ευαίσθητα δεδομένα χρήστη.
+        \n\tΤο InviZible Night δεν συλλέγει ούτε κοινοποιεί προσωπικά ή ευαίσθητα δεδομένα χρήστη.
         \n\n\tCopyright © 2019-2026
         \n\tGarmatin Oleksandr
         \n\tinvizible.soft@gmail.com
@@ -378,7 +378,7 @@ Should it be named instead "Βασικές Ρυθμίσεις" (originating from
     <string name="pref_tor_edit_conf">"Επεξεργαστείτε απευθείας το αρχείο tor.conf"</string>
     <string name="pref_itpd_edit_conf">"Επεξεργαστείτε το αρχείο i2pd.conf απευθείας"</string>
     <string name="pref_itpd_edit_tunnels">"Επεξεργαστείτε απευθείας το αρχείο tunnels.conf"</string>
-    <string name="config_changes_dialog_message">"Θέλετε να αποθηκεύσετε τις αλλαγές; Μπορεί να σταματήσει τη λειτουργία του InviZible Pro."</string>
+    <string name="config_changes_dialog_message">"Θέλετε να αποθηκεύσετε τις αλλαγές; Μπορεί να σταματήσει τη λειτουργία του InviZible Night."</string>
     <string name="pref_dnscrypt_ipv4_servers_summ">"Χρήση διακομιστών προσβάσιμων μέσω IPv4"</string>
     <string name="pref_dnscrypt_ipv6_servers_summ">"Χρήση διακομιστών προσβάσιμους μέσω IPv6"</string>
     <string name="pref_dnscrypt_import_forwarding_rules">"Εισαγωγή κανόνων προώθησης"</string>
@@ -414,7 +414,7 @@ Should it be named instead "Βασικές Ρυθμίσεις" (originating from
     <string name="pref_common_arp_block_internet_summ">Η σύνδεση στο διαδίκτυο θα αποκλειστεί κατά τη διάρκεια της επίθεσης</string>
     <string name="pref_common_proxy_categ">"Μεσολαβητής"</string>
     <string name="pref_common_proxy">"Χρήση μεσολαβητή socks5"</string>
-    <string name="pref_common_proxy_summ">"Το InviZible Pro θα πραγματοποιήσει όλες τις συνδέσεις μέσω του διακομιστή μεσολάβησης SOCKS5"</string>
+    <string name="pref_common_proxy_summ">"Το InviZible Night θα πραγματοποιήσει όλες τις συνδέσεις μέσω του διακομιστή μεσολάβησης SOCKS5"</string>
     <string name="pref_common_compatibility_mode">"Λειτουργία συμβατότητας"</string>
     <!-- only simple curiousity, if the word "START" should be translated ? -->
     <string name="pref_common_compatibility_mode_summ">Ενεργοποιήστε το εάν η συσκευή σας είναι με προσαρμοσμένη rom και η σύνδεση χάνεται όταν πατήσετε το κουμπί START</string>
@@ -495,7 +495,7 @@ Should it be named instead "Βασικές Ρυθμίσεις" (originating from
     <string name="btnResetSettings">"Επαναφορά Αρχικών Ρυθμίσεων"</string>
     <string name="backupSaved">"Το αντίγραφο ασφαλείας αποθηκεύτηκε"</string>
     <string name="backupRestored">"Εγινε επαναφορά αντιγράφου ασφαλείας"</string>
-    <string name="thanks_for_donate_gp">"Το InviZible Pro Project και ο προγραμματιστής του εκφράζουν την εκτίμηση τους για τη βοήθεια σας!"</string>
+    <string name="thanks_for_donate_gp">"Το InviZible Night Project και ο προγραμματιστής του εκφράζουν την εκτίμηση τους για τη βοήθεια σας!"</string>
     <string name="pref_tor_hardware_accel_summ">"Προσπαθήστε να χρησιμοποιήσετε την ενσωματωμένη επιτάχυνση υλικού κρυπτογράφησης όταν είναι διαθέσιμη."</string>
     <string name="notification_connecting">Σύνδεση…</string>
     <string name="notification_waiting_network">Αναμονή για το δίκτυο…</string>

@@ -105,7 +105,7 @@
     <string name="pref_common_show_help">Показывать справку</string>
     <string name="pref_common_show_help_summ">Показывать все сообщения, ранее отмеченные как неразрешённые к показу</string>
     <string name="notification_exclude_bat_optimisation_title">Выключить оптимизацию батареи?</string>
-    <string name="pref_common_notification_helper">Пожалуйста, исключите InviZible Pro из списка оптимизации энергопотребления. Иначе Андроид может завершить DNSCrypt, Tor или I2P в любой момент. Для некоторых оболочек, например MIUI, могут потребоваться дополнительные настройки.</string>
+    <string name="pref_common_notification_helper">Пожалуйста, исключите InviZible Night из списка оптимизации энергопотребления. Иначе Андроид может завершить DNSCrypt, Tor или I2P в любой момент. Для некоторых оболочек, например MIUI, могут потребоваться дополнительные настройки.</string>
     <string name="notification_exclude_data_restriction_title">Отключить экономию трафика?</string>
     <string name="notification_exclude_data_restriction_message">Разрешите передачу данных в фоновом режиме и передачу данных в режиме экономии энергии. Это важно для бесперебойной работы приложения.</string>
     <string name="pref_common_use_busybox">Выбрать BusyBox</string>
@@ -300,7 +300,7 @@
     <string name="pref_common_block_http_summ">Закрыть HTTP порт 80 для точки доступа</string>
     <string name="pref_common_restart_dnscrypt">Пожалуйста, перезапустите DNSCrypt</string>
     <string name="update_dnscrypt_has_apdate">Доступно обновление DNSCrypt. Загрузить и установить его? Обновление будет продолжено в фоновом режиме.</string>
-    <string name="update_ipro_has_apdate">Доступно обновление InviZible Pro. Загрузить и установить его? Обновление будет продолжено в фоновом режиме.</string>
+    <string name="update_ipro_has_apdate">Доступно обновление InviZible Night. Загрузить и установить его? Обновление будет продолжено в фоновом режиме.</string>
     <string name="update_itpd_has_apdate">Доступно обновление Purple I2P. Загрузить и установить его? Обновление будет продолжено в фоновом режиме.</string>
     <string name="update_notification">Загрузка файла</string>
     <string name="update_tor_has_apdate">Доступно обновление Tor. Загрузить и установить его? Обновление будет продолжено в фоновом режиме.</string>
@@ -311,7 +311,7 @@
     <string name="pref_fast_chek_update">Проверить обновления</string>
     <string name="pref_fast_chek_update_summ">Проверить наличие новых версий</string>
     <string name="pref_fast_auto_update">Автообновление</string>
-    <string name="pref_fast_auto_update_summ">Проверять обновления InviZible Pro и модулей ежедневно</string>
+    <string name="pref_fast_auto_update_summ">Проверять обновления InviZible Night и модулей ежедневно</string>
     <string name="update_fault">Ошибка обновления.</string>
     <string name="update_check_no_update">Нет новых версий.</string>
     <string name="update_checking_message">Подождите, проверка обновлений.</string>
@@ -329,17 +329,17 @@
     <string name="donate">Поддержка проекта</string>
     <string name="donate_button">Посетить</string>
     <string name="enter_code_button">Ввести код</string>
-    <string name="donate_project">Проект InviZible Pro нуждается в Вашей помощи. Пожалуйста, посетите страницу поддержки или введите уже полученный PRO код.</string>
-    <string name="thanks_for_donate">Проект InviZible Pro и его автор благодарен за помощь. Загрузить и обновить до PRO? Обновление будет продолжено в фоновом режиме.</string>
-    <string name="thanks_for_donate_gp">Проект InviZible Pro и его автор благодарен за помощь!</string>
+    <string name="donate_project">Проект InviZible Night нуждается в Вашей помощи. Пожалуйста, посетите страницу поддержки или введите уже полученный PRO код.</string>
+    <string name="thanks_for_donate">Проект InviZible Night и его автор благодарен за помощь. Загрузить и обновить до PRO? Обновление будет продолжено в фоновом режиме.</string>
+    <string name="thanks_for_donate_gp">Проект InviZible Night и его автор благодарен за помощь!</string>
     <string name="enter_code">Введите код</string>
-    <string name="update_over_five_times">Вы проверяли обновление InviZible Pro больше 5 раз в день. Пожалуйста, попробуйте позже.</string>
-    <string name="update_over_three_activations">Похоже Вы уже активировали 3 копии InviZible Pro этим кодом. Если это не так, свяжитесь с разработчиком.</string>
+    <string name="update_over_five_times">Вы проверяли обновление InviZible Night больше 5 раз в день. Пожалуйста, попробуйте позже.</string>
+    <string name="update_over_three_activations">Похоже Вы уже активировали 3 копии InviZible Night этим кодом. Если это не так, свяжитесь с разработчиком.</string>
     <string name="update_wrong_code">Похоже Ваш PRO код неверный. Пожалуйста, свяжитесь с разработчиком.</string>
     <string name="pref_common_wakelock">Запретить сон устройства</string>
     <string name="pref_common_wakelock_summ">Не позволять устройству переходить в режим сна. Может быть полезно при использовании точки доступа. Разряжает батарею!</string>
-    <string name="message_no_root_used">Вы можете использовать InviZible Pro в режиме локального VPN или совместно с приложениями с функцией прокси или собственным локальным VPN.</string>
-    <string name="message_no_root_used_kitkat">Вы можете использовать InviZible Pro совместно с приложениями с функцией прокси или собственным локальным VPN.</string>
+    <string name="message_no_root_used">Вы можете использовать InviZible Night в режиме локального VPN или совместно с приложениями с функцией прокси или собственным локальным VPN.</string>
+    <string name="message_no_root_used_kitkat">Вы можете использовать InviZible Night совместно с приложениями с функцией прокси или собственным локальным VPN.</string>
     <string name="pref_dnscrypt_relays">Источники</string>
     <string name="pref_dnscrypt_relays_delay_summ">Список ретрансляторов будет обновлён после указанной задержки в часах.</string>
     <string name="pref_dnscrypt_relays_categ">Реле</string>
@@ -359,25 +359,25 @@
     <string name="main_fragment_access_i2p">Доступ к сети I2P с помощью Purple I2P</string>
     <string name="tvTorConnecting">Подключение</string>
     <string name="reset_settings_title">Внимание</string>
-    <string name="ask_reset_settings_text">InviZible Pro не может запустить %1$s! Пожалуйста, попробуйте сбросить настройки %2$s. Если это не помогает, перезагрузите ваше устройство.</string>
+    <string name="ask_reset_settings_text">InviZible Night не может запустить %1$s! Пожалуйста, попробуйте сбросить настройки %2$s. Если это не помогает, перезагрузите ваше устройство.</string>
     <string name="ask_reset_settings_btn">Сбросить</string>
     <string name="add_custom_server_title">Добавить сервер</string>
     <string name="add_custom_server_error">Неправильная конфигурация сервера. Пожалуйста, проверьте поле SDNS.</string>
     <string name="pref_tor_clean_module_folder">Очистить кеш</string>
     <string name="done">Готово</string>
     <string name="pending_purchase">Пожалуйста, обратите внимание. У Вас есть незавершенная покупка:</string>
-    <string name="buy_premium_gp">Проект InviZible Pro нуждается в Вашей помощи. Нажмите ОК, чтобы приобрести премиум возможности.</string>
+    <string name="buy_premium_gp">Проект InviZible Night нуждается в Вашей помощи. Нажмите ОК, чтобы приобрести премиум возможности.</string>
     <string name="wrong_purchase_signature_gp">К сожалению, мы не можем подтвердить вашу покупку. Вы получите возврат средств через 3 дня.</string>
     <string name="premium">Премиум версия</string>
     <string name="only_premium_feature">К сожалению, эта опция доступна только в премиум версии.</string>
     <string name="agree">Я согласен</string>
     <string name="disagree">Не согласен</string>
     <string name="agreement_text">
-        \tСпасибо за выбор InviZible Pro. Уверен, приложение будет полезно для Вашей конфиденциальности и комфортного использования интернета.
-        \n\n\tInviZible Pro содержит Tor, DNSCrypt и Purple I2P в качестве модулей.
-        \n\n\tInviZible Pro может использовать Root, если у Вас есть Root права, или использовать локальный VPN для доставки интернет-трафика напрямую в сети Tor, DNSCrypt и I2P.
+        \tСпасибо за выбор InviZible Night. Уверен, приложение будет полезно для Вашей конфиденциальности и комфортного использования интернета.
+        \n\n\tInviZible Night содержит Tor, DNSCrypt и Purple I2P в качестве модулей.
+        \n\n\tInviZible Night может использовать Root, если у Вас есть Root права, или использовать локальный VPN для доставки интернет-трафика напрямую в сети Tor, DNSCrypt и I2P.
         \n\n\tПолитика конфиденциальности:
-        \n\tInviZible Pro не собирает и не передаёт какие-либо личные или конфиденциальные данные пользователей.
+        \n\tInviZible Night не собирает и не передаёт какие-либо личные или конфиденциальные данные пользователей.
         \n\n\tCopyright © 2019-2026
         \n\tGarmatin Oleksandr
         \n\tinvizible.soft@gmail.com
@@ -399,7 +399,7 @@
     <string name="pref_itpd_edit_conf">Редактировать i2pd.conf</string>
     <string name="save_changes">Сохранить изменения</string>
     <string name="discard_changes">Отменить изменения</string>
-    <string name="config_changes_dialog_message">Вы хотите сохранить изменения? Это может нарушить работу InviZible Pro.</string>
+    <string name="config_changes_dialog_message">Вы хотите сохранить изменения? Это может нарушить работу InviZible Night.</string>
     <string name="helper_dnscrypt_private_dns">Пожалуйста, отключите \"Персональный DNS\" в настройках телефона. Эта опция мешает работе InviZible.</string>
     <string name="helper_dnscrypt_proxy_wifi">Пожалуйста, отключите прокси в настройках Wi-Fi телефона. Эта опция мешает работе InviZible.</string>
     <string name="helper_dnscrypt_proxy_gsm">Пожалуйста, отключите прокси в APN в настройках мобильной сети телефона. Эта опция мешает работе InviZible.</string>
@@ -444,7 +444,7 @@
     <string name="pref_tor_SOCKS_output_address_summ">Tor будет выполнять все соединения через SOCKS5 прокси.</string>
     <string name="pref_common_proxy_categ">Прокси</string>
     <string name="pref_common_proxy">Использовать Socks5 прокси</string>
-    <string name="pref_common_proxy_summ">InviZible Pro будет выполнять все подключения через Socks5 прокси</string>
+    <string name="pref_common_proxy_summ">InviZible Night будет выполнять все подключения через Socks5 прокси</string>
     <string name="proxy_server_ip">Прокси сервер:</string>
     <string name="proxy_server_port">Прокси порт:</string>
     <string name="proxy_server_user_name">Пользователь:</string>
@@ -524,7 +524,7 @@
     <string name="pref_firewall_show_all_apps_off_summ">Показаны только те приложения, которые могут подключаться к интернету.</string>
     <string name="pref_common_kill_switch">Аварийный блокировщик</string>
     <string name="pref_common_kill_switch_summ">Блокировать подключение к интернету, когда Tor, DNSCrypt и Purple I2P остановлены</string>
-    <string name="pref_common_always_on_vpn_summ">Включите Постоянный VPN и Блокировать соединения без VPN для InviZible Pro, чтобы заблокировать интернет, когда приложение не запущено</string>
+    <string name="pref_common_always_on_vpn_summ">Включите Постоянный VPN и Блокировать соединения без VPN для InviZible Night, чтобы заблокировать интернет, когда приложение не запущено</string>
     <string name="notification_internet_blocked_message">Интернет заблокирован Аварийным блокировщиком. Запустите Tor, DNSCrypt или Purple I2P, чтобы разрешить соединение. Либо выключите Аварийный блокировщик в Общих настройках.</string>
     <string name="list_is_empty">Список пустой</string>
     <string name="pref_dnscrypt_forwarding_rules_categ">Правила переадресации</string>

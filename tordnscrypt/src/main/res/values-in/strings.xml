@@ -41,8 +41,8 @@
     <!-- "Saya setuju" are more closed with this -->
     <string name="agree">"Setuju"</string>
     <string name="disagree">"Tolak"</string>
-    <string name="message_no_root_used">"Anda dapat menggunakan InviZible Pro dengan modus VPN lokal, atau aplikasi proxy atau lokal VPN dengan fitur mode proxy."</string>
-    <string name="message_no_root_used_kitkat">"Anda bisa menggunakan InviZible Pro dengan aplikasi dengan proxy atau Lokal VPN dengan fitur di proxy mode."</string>
+    <string name="message_no_root_used">"Anda dapat menggunakan InviZible Night dengan modus VPN lokal, atau aplikasi proxy atau lokal VPN dengan fitur mode proxy."</string>
+    <string name="message_no_root_used_kitkat">"Anda bisa menggunakan InviZible Night dengan aplikasi dengan proxy atau Lokal VPN dengan fitur di proxy mode."</string>
     <string name="write_file_error">"Galat menyimpan berkas!"</string>
     <string name="drawer_menu_commonSettings">"Setelan Umum"</string>
     <string name="drawer_menu_DNSSettings">"Setelan DNSCrypt"</string>
@@ -109,7 +109,7 @@
     <string name="pref_fast_categ_update">"Pembaruan"</string>
     <!-- Pemutakhiran otomatis -->
     <string name="pref_fast_auto_update">Pembaruan otomatis</string>
-    <string name="pref_fast_auto_update_summ">Periksa pembaruan InviZible Pro dan modul setiap hari</string>
+    <string name="pref_fast_auto_update_summ">Periksa pembaruan InviZible Night dan modul setiap hari</string>
     <string name="pref_fast_chek_update">Periksa pembaruan</string>
     <string name="pref_fast_chek_update_summ">"Periksa jika versi baru sudah tersedia"</string>
     <string name="pref_fast_through_tor_update">"Perbarui secara ketat melalui Tor"</string>
@@ -128,7 +128,7 @@
     <string name="pref_common_wakelock_summ">Mencegah perangkat masuk ke mode hemat daya. Berguna saat menggunakan HOTSPOT. Menguras baterai!</string>
     <string name="pref_common_show_help">"Pesan bantuan"</string>
     <string name="pref_common_show_help_summ">Menampilkan semua pesan yang sebelumnya disembunyikan</string>
-    <string name="pref_common_notification_helper">Harap kecualikan InviZible Pro dari optimasi baterai Android agar sistem tidak menghentikan DNSCrypt, Tor, atau I2P kapan saja. Beberapa sistem khusus, seperti MIUI, mungkin memerlukan langkah tambahan.</string>
+    <string name="pref_common_notification_helper">Harap kecualikan InviZible Night dari optimasi baterai Android agar sistem tidak menghentikan DNSCrypt, Tor, atau I2P kapan saja. Beberapa sistem khusus, seperti MIUI, mungkin memerlukan langkah tambahan.</string>
     <string name="pref_common_use_busybox">"Pilih BusyBox"</string>
     <string name="pref_common_categ_hotspot">"Experimental-HOTSPOT"</string>
     <string name="pref_common_tethering_autostart">Mulai berbagi saat perangkat dinyalakan</string>
@@ -305,12 +305,12 @@
     <string name="update_core_yes">"Memperbarui"</string>
     <string name="update_core_no">"Nanti"</string>
     <string name="update_core_not_show_again">"Jangan tanya lagi"</string>
-    <string name="update_core_restart">Silakan mulai kembali InviZible Pro dan ijinkan seluruh proses pemasangan! Jika anda memakai HOTSPOT, silakan atur ulang pengaturan HOTSPOTnya!</string>
+    <string name="update_core_restart">Silakan mulai kembali InviZible Night dan ijinkan seluruh proses pemasangan! Jika anda memakai HOTSPOT, silakan atur ulang pengaturan HOTSPOTnya!</string>
     <string name="update_notification">"Mengunduh berkas"</string>
     <string name="update_interrupt_notification">"Unduhan dihentikan"</string>
     <string name="cancel_download">"BATALKAN UNDUHAN"</string>
     <string name="update_new_version">"Versi baru:"</string>
-    <string name="update_ipro_has_apdate">"Pembaruan InviZible Pro tersedia. Apakah Anda ingin mengunduh dan memperbaruinya? Pembaruan akan berlanjut di latar belakang."</string>
+    <string name="update_ipro_has_apdate">"Pembaruan InviZible Night tersedia. Apakah Anda ingin mengunduh dan memperbaruinya? Pembaruan akan berlanjut di latar belakang."</string>
     <string name="update_dnscrypt_has_apdate">"Pembaruan DNSCrypt tersedia. Apakah Anda ingin mengunduh dan memperbaruinya? Pembaruan akan berlanjut di latar belakang."</string>
     <string name="update_tor_has_apdate">"Pembaruan Tor tersedia. Apakah Anda ingin mengunduh dan memperbaruinya? Pembaruan akan berlanjut di latar belakang."</string>
     <string name="update_itpd_has_apdate">"Pembaruan Purple I2P tersedia. Apakah Anda ingin mengunduh dan memperbaruinya? Pembaruan akan berlanjut di latar belakang."</string>
@@ -325,11 +325,11 @@
     <string name="update_installed">"Pembaruan telah diinstal."</string>
     <string name="update_over_three_activations">"Sepertinya Anda sudah mengaktifkan 3 salinan InviZible dengan kode ini. Jika salah, silakan hubungi pengembang."</string>
     <string name="update_wrong_code">"Sepertinya kode PRO Anda salah. Silakan hubungi pengembang."</string>
-    <string name="update_over_five_times">"Anda memeriksa pembaruan InviZible Pro lebih dari 5 pada hari ini. Silakan coba lagi nanti."</string>
+    <string name="update_over_five_times">"Anda memeriksa pembaruan InviZible Night lebih dari 5 pada hari ini. Silakan coba lagi nanti."</string>
     <string name="verifier_error">"Hati-hati! Versi Invizible Pro yang anda pakai tidak resmi!"</string>
     <string name="only_for_pro">"Hanya untuk versi PRO"</string>
     <string name="donate">"Donasi"</string>
-    <string name="donate_project">Projek InviZible Pro membutuhkan dukungan anda. Silahkan kunjungi halaman donasi atau masukkan kode premium yang telah anda terima.</string>
+    <string name="donate_project">Projek InviZible Night membutuhkan dukungan anda. Silahkan kunjungi halaman donasi atau masukkan kode premium yang telah anda terima.</string>
     <string name="donate_button">"Kunjungi"</string>
     <string name="enter_code_button">"Masukkan kode"</string>
     <string name="enter_code">"Masukkan kode"</string>
@@ -346,7 +346,7 @@
     <string name="add_custom_server_title">"Tambahkan server khusus"</string>
     <string name="add_custom_server_error">"Konfigurasi server khusus tidak valid. Silakan periksa bidang SDNS."</string>
     <string name="pending_purchase">"Harap perhatikan bahwa Anda memiliki pembelian yang tertunda:"</string>
-    <string name="buy_premium_gp">Projek InviZible Pro membutuhkan bantuan anda. Tekan OK untuk membeli fitur premium.</string>
+    <string name="buy_premium_gp">Projek InviZible Night membutuhkan bantuan anda. Tekan OK untuk membeli fitur premium.</string>
     <string name="wrong_purchase_signature_gp">Maaf, tetapi tidak mungkin untuk mengkonfirmasi pembelian mu. Anda akan menerima pengembalian dana setelah 3 hari.</string>
     <string name="only_premium_feature">"Sayangnya, fitur ini hanya tersedia untuk versi premium."</string>
     <string name="pref_itpd_use_HTTP_outproxy">Proxy keluar HTTP</string>
@@ -484,11 +484,11 @@
     <string name="tile_changing_tor_ip">Mengganti IP Tor</string>
     <string name="tile_dialog_over_three_tiles_message">Kamu sudah menambahkan lebih dari 3 ubin ke Pengaturan Cepat. Disarankan hanya menambahkan 3. Menambahkan lebih dari 3 ubin dapat menyebabkan masalah dengan kontrol aplikasi.</string>
     <string name="agreement_text">
-        \tTerima kasih sudah memilih InviZible Pro. Saya harap ini dapat berguna untuk privasi dan kenyamanan berinternet anda.
-        \n\n\tInviZible Pro menggunakan Tor, DNSCrypt dan Purple I2P sebagai modulnya
-        \n\n\tInviZible Pro bisa menggunakanroot, juka penrangkat mu memeliki izin root, atau menggunakan VPN lokal untuk Tor, DNSCrypt dan I2P.
+        \tTerima kasih sudah memilih InviZible Night. Saya harap ini dapat berguna untuk privasi dan kenyamanan berinternet anda.
+        \n\n\tInviZible Night menggunakan Tor, DNSCrypt dan Purple I2P sebagai modulnya
+        \n\n\tInviZible Night bisa menggunakanroot, juka penrangkat mu memeliki izin root, atau menggunakan VPN lokal untuk Tor, DNSCrypt dan I2P.
         \n\n\tKebijakan privasi:
-        \n\tInviZible Pro tidak mengumpulkan dan membagikan data sensitif pengguna.
+        \n\tInviZible Night tidak mengumpulkan dan membagikan data sensitif pengguna.
         \n\n\tCopyright © 2019-2026
         \n\tGarmatin Oleksandr
         \n\tinvizible.soft@gmail.com
@@ -544,7 +544,7 @@
     <string name="pref_common_use_iptables_device">Gunakan perangkat iptables</string>
     <string name="pref_common_wait_iptables_summ">Tunggu hingga kunci eksklusif iptables dapat diperoleh untuk mencegah perubahan aturan iptables secara bersamaan</string>
     <string name="pref_tor_snowflake_select_rendezvous_summ">Menyembunyikan nama domain broker dari penyedia Internet. Broker digunakan untuk membuat koneksi.</string>
-    <string name="ask_reset_settings_text">InviZible Pro tidak dapat memulai %1$s! Coba atur ulang pengaturan %2$s. Jika hal ini tidak membantu, mulai ulang perangkat Anda.</string>
+    <string name="ask_reset_settings_text">InviZible Night tidak dapat memulai %1$s! Coba atur ulang pengaturan %2$s. Jika hal ini tidak membantu, mulai ulang perangkat Anda.</string>
     <string name="pull_to_refresh">↓ Tarik untuk menyegarkan ↓</string>
     <string name="notifications_permission_rationale_message">Pemberitahuan sangat penting untuk menampilkan informasi penting tentang operasi aplikasi, kontrol aplikasi, dan serangan yang terdeteksi. Apakah Anda ingin mengizinkan pemberitahuan untuk InviZible?</string>
     <string name="long_press_to_add">Tekan lama untuk menambahkan.</string>
@@ -553,7 +553,7 @@
     <string name="pref_fast_fake_sni">Memalsukan identitas SNI</string>
     <string name="pref_fast_block_lan_with_free_wifi">Memblokir akses LAN saat menggunakan Wi-Fi publik</string>
     <string name="pref_fast_block_lan_with_free_wifi_summ">Memutus akses ke LAN ketika Wi-Fi dengan halaman login terdeteksi</string>
-    <string name="pref_common_always_on_vpn_summ">Aktifkan VPN Selalu Aktif dan blokir koneksi tanpa VPN agar InviZible Pro memutus internet saat aplikasi tidak berjalan</string>
+    <string name="pref_common_always_on_vpn_summ">Aktifkan VPN Selalu Aktif dan blokir koneksi tanpa VPN agar InviZible Night memutus internet saat aplikasi tidak berjalan</string>
     <string name="pref_common_fast_network_switching">Mempercepat perpindahan antar jaringan</string>
     <string name="pref_common_fast_network_switching_summ">Tetap mengaktifkan Wi-Fi dan data seluler untuk peralihan jaringan yang lebih cepat</string>
     <string name="pref_dnscrypt_rules_delay_summ">Pembaruan aturan akan dilakukan setelah penundaan sesuai jumlah jam yang ditetapkan.</string>

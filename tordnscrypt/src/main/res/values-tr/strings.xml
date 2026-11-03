@@ -46,8 +46,8 @@
     <string name="deny">Reddet</string>
     <string name="areYouSure">Emin misiniz? Bu işlem geri alınamaz!</string>
     <string name="ask_later">Daha sonra sor</string>
-    <string name="message_no_root_used">InviZible Pro\'yu yerel VPN modu veya kendi proxy ya da yerel VPN özelliği olan uygulamalarla proxy modunda kullanabilirsiniz.</string>
-    <string name="message_no_root_used_kitkat">InviZible Pro\'yu, kendi proxy veya yerel VPN özelliği olan uygulamalarla proxy modunda kullanabilirsiniz.</string>
+    <string name="message_no_root_used">InviZible Night\'yu yerel VPN modu veya kendi proxy ya da yerel VPN özelliği olan uygulamalarla proxy modunda kullanabilirsiniz.</string>
+    <string name="message_no_root_used_kitkat">InviZible Night\'yu, kendi proxy veya yerel VPN özelliği olan uygulamalarla proxy modunda kullanabilirsiniz.</string>
     <string name="write_file_error">Dosya kaydetme hatası!</string>
     <string name="drawer_menu_commonSettings">Genel Ayarlar</string>
     <string name="drawer_menu_DNSSettings">DNSCrypt Ayarları</string>
@@ -130,7 +130,7 @@
     <string name="pref_fast_block_http_summ">80 numaralı HTTP bağlantı noktasına bağlantıyı reddet</string>
     <string name="pref_fast_categ_update">Güncelleme</string>
     <string name="pref_fast_auto_update">Otomatik güncellemeler</string>
-    <string name="pref_fast_auto_update_summ">InviZible Pro ve modül güncellemelerini her gün kontrol et</string>
+    <string name="pref_fast_auto_update_summ">InviZible Night ve modül güncellemelerini her gün kontrol et</string>
     <string name="pref_fast_chek_update">Güncellemeleri kontrol et</string>
     <string name="pref_fast_chek_update_summ">Yeni sürümlerin şu anda mevcut olup olmadığını kontrol edin</string>
     <string name="pref_fast_through_tor_update">Yalnızca Tor üzerinden güncelle</string>
@@ -153,12 +153,12 @@
     <string name="pref_common_dns_rebind_protection_summ">DNS yeniden bağlama saldırısı algılandığında siteyi engelleyin</string>
     <string name="pref_common_proxy_categ">Proxy</string>
     <string name="pref_common_proxy">SOCKS5 proxy kullan</string>
-    <string name="pref_common_proxy_summ">InviZible Pro tüm bağlantıları SOCKS5 proxy üzerinden yapacak</string>
+    <string name="pref_common_proxy_summ">InviZible Night tüm bağlantıları SOCKS5 proxy üzerinden yapacak</string>
     <string name="pref_common_kill_switch">Kill switch</string>
     <string name="pref_common_kill_switch_summ">Tor, DNSCrypt veya Purple I2P durdurulduğunda internet bağlantısını engelleyin</string>
     <string name="pref_common_refresh_rules">Kuralları yenile</string>
     <string name="pref_common_refresh_rules_summ">Her bağlantı değişiminde kuralları güncelleyin</string>
-    <string name="pref_common_always_on_vpn_summ">InviZible Pro çalışmadığında interneti engellemek için Her Zaman Açık VPN özelliğini etkinleştirin ve VPN olmadan bağlantıları engelleyin</string>
+    <string name="pref_common_always_on_vpn_summ">InviZible Night çalışmadığında interneti engellemek için Her Zaman Açık VPN özelliğini etkinleştirin ve VPN olmadan bağlantıları engelleyin</string>
     <string name="pref_common_show_notification">Bildirim göster</string>
     <string name="pref_common_wakelock">Cihazın uykuya geçmesini önle</string>
     <string name="pref_common_wakelock_summ">Cihazın uyku moduna geçmesine izin vermeyin. HOTSPOT kullanımı sırasında faydalı olabilir. Batarya tüketimini artırır!</string>
@@ -169,7 +169,7 @@
     <string name="pref_common_shell_control">Komut dosyası kontrolünü etkinleştir</string>
     <string name="pref_common_shell_control_summ" tools:ignore="TypographyDashes">Uygulama modüllerini yönetmek için aşağıdaki komutu kullanın: \"am broadcast -a pan.alexander.tordnscrypt.SHELL_SCRIPT_CONTROL --ei dnscrypt 1 --ei tor 1 --ei i2p 1 %s\". Burada 1 - başlatır, 0 - modülü durdurur.</string>
     <string name="notification_exclude_bat_optimisation_title">Pil optimizasyonunu durdurmak ister misiniz?</string>
-    <string name="pref_common_notification_helper">Sistemin DNSCrypt, Tor veya I2P’yi herhangi bir anda sonlandırmasını önlemek için InviZible Pro’yu Android pil optimizasyonundan hariç tutun. MIUI gibi bazı özel sistemlerde ek adımlar gerekebilir.</string>
+    <string name="pref_common_notification_helper">Sistemin DNSCrypt, Tor veya I2P’yi herhangi bir anda sonlandırmasını önlemek için InviZible Night’yu Android pil optimizasyonundan hariç tutun. MIUI gibi bazı özel sistemlerde ek adımlar gerekebilir.</string>
     <string name="notification_exclude_data_restriction_title">Ağ veri tasarrufunu devre dışı bırakmak ister misiniz?</string>
     <string name="notification_exclude_data_restriction_message">Arka planda veri kullanımına izin verin ve Veri Tasarrufu açıkken veri kullanımına izin verin. Bu, sorunsuz bir çevrimiçi deneyim için gereklidir.</string>
     <string name="pref_common_use_busybox">BusyBox Seç</string>
@@ -421,12 +421,12 @@
     <string name="update_core_yes">Güncelle</string>
     <string name="update_core_no">Daha Sonra</string>
     <string name="update_core_not_show_again">Bir daha sorma</string>
-    <string name="update_core_restart">Lütfen InviZible Pro\'yu yeniden başlatın ve kurulumun tamamlanmasına izin verin! Kurulumdan sonra HOTSPOT\'u yeniden yapılandırın (kullanıyorsanız)!</string>
+    <string name="update_core_restart">Lütfen InviZible Night\'yu yeniden başlatın ve kurulumun tamamlanmasına izin verin! Kurulumdan sonra HOTSPOT\'u yeniden yapılandırın (kullanıyorsanız)!</string>
     <string name="update_notification">Dosya indiriliyor</string>
     <string name="update_interrupt_notification">İndirme durduruldu</string>
     <string name="cancel_download">İNDİRMEYİ İPTAL ET</string>
     <string name="update_new_version">Yeni Sürüm:</string>
-    <string name="update_ipro_has_apdate">InviZible Pro için güncelleme mevcut. İndirmek ve güncellemek ister misiniz? Güncelleme arka planda devam edecektir.</string>
+    <string name="update_ipro_has_apdate">InviZible Night için güncelleme mevcut. İndirmek ve güncellemek ister misiniz? Güncelleme arka planda devam edecektir.</string>
     <string name="update_dnscrypt_has_apdate">DNSCrypt için güncelleme mevcut. İndirmek ve güncellemek ister misiniz? Güncelleme arka planda devam edecektir.</string>
     <string name="update_tor_has_apdate">Tor için güncelleme mevcut. İndirmek ve güncellemek ister misiniz? Güncelleme arka planda devam edecektir.</string>
     <string name="update_itpd_has_apdate">Purple I2P için güncelleme mevcut. İndirmek ve güncellemek ister misiniz? Güncelleme arka planda devam edecektir.</string>
@@ -441,16 +441,16 @@
     <string name="update_installed">Güncellemeler yüklendi.</string>
     <string name="update_over_three_activations">Bu kod ile zaten 3 adet InviZible kopyası etkinleştirdiniz. Bir hata olduğunu düşünüyorsanız, lütfen geliştirici ile iletişime geçin.</string>
     <string name="update_wrong_code">PRO kodunuz yanlış görünüyor. Lütfen geliştirici ile iletişime geçin.</string>
-    <string name="update_over_five_times">InviZible Pro güncellemelerini bir günde 5 defadan fazla kontrol ettiniz. Lütfen daha sonra tekrar deneyin.</string>
+    <string name="update_over_five_times">InviZible Night güncellemelerini bir günde 5 defadan fazla kontrol ettiniz. Lütfen daha sonra tekrar deneyin.</string>
     <string name="verifier_error">Görünüşe göre bu, InviZible\'ın resmi olmayan bir sürümü. Dikkatli olun!</string>
     <string name="only_for_pro">Yalnızca PRO sürümü için</string>
     <string name="donate">Bağış Yap</string>
-    <string name="donate_project">InviZible Pro Projesi yardımlarınızı bekliyor. Lütfen bağış sayfasını ziyaret edin veya daha önce aldığınız premium kodunu girin.</string>
+    <string name="donate_project">InviZible Night Projesi yardımlarınızı bekliyor. Lütfen bağış sayfasını ziyaret edin veya daha önce aldığınız premium kodunu girin.</string>
     <string name="donate_button">Ziyaret Et</string>
     <string name="enter_code_button">Kodu Gir</string>
     <string name="enter_code">Kodu Gir</string>
-    <string name="thanks_for_donate">InviZible Pro Projesi ve yazarı, desteğiniz için teşekkür eder. PRO sürümünü indirmek ve yükseltmek ister misiniz? Güncelleme arka planda devam edecektir.</string>
-    <string name="thanks_for_donate_gp">InviZible Pro Projesi ve yazarı, desteğiniz için teşekkür eder!</string>
+    <string name="thanks_for_donate">InviZible Night Projesi ve yazarı, desteğiniz için teşekkür eder. PRO sürümünü indirmek ve yükseltmek ister misiniz? Güncelleme arka planda devam edecektir.</string>
+    <string name="thanks_for_donate_gp">InviZible Night Projesi ve yazarı, desteğiniz için teşekkür eder!</string>
     <string name="vpn_mode_active">VPN modu etkin</string>
     <string name="vpn_mode_off">VPN modu kapalı</string>
     <string name="vpn_mode_error">VPN modu hatası!</string>
@@ -460,25 +460,25 @@
     <string name="main_fragment_access_i2p">Purple I2P ile I2P ağına erişim</string>
     <string name="reset_settings_title">Dikkat</string>
     <string name="ask_reset_settings_btn">Sıfırla</string>
-    <string name="ask_reset_settings_text">InviZible Pro %1$s başlatılamadı! Lütfen %2$s ayarlarını sıfırlamayı deneyin. Bu da işe yaramazsa, cihazınızı yeniden başlatın.</string>
+    <string name="ask_reset_settings_text">InviZible Night %1$s başlatılamadı! Lütfen %2$s ayarlarını sıfırlamayı deneyin. Bu da işe yaramazsa, cihazınızı yeniden başlatın.</string>
     <string name="add_custom_server_title">Özel sunucu ekle</string>
     <string name="add_custom_server_error">Geçersiz özel sunucu yapılandırması. Lütfen SDNS alanını kontrol edin.</string>
     <string name="pending_purchase">Lütfen dikkat: Bekleyen bir satın alımınız var:</string>
-    <string name="buy_premium_gp">InviZible Pro Projesi yardımınızı bekliyor. Premium özellikleri satın almak için TAMAM\'a basın.</string>
+    <string name="buy_premium_gp">InviZible Night Projesi yardımınızı bekliyor. Premium özellikleri satın almak için TAMAM\'a basın.</string>
     <string name="wrong_purchase_signature_gp">Üzgünüz, ancak satın alımınızı doğrulamak mümkün değil. 3 gün içinde ücret iadesi alacaksınız.</string>
     <string name="only_premium_feature">Maalesef, bu özellik yalnızca premium sürüm için kullanılabilir.</string>
     <string name="agreement_text">
-        \tInviZible Pro’yu tercih ettiğiniz için teşekkürler. Gizliliğinizi artıracağına ve size sorunsuz bir çevrimiçi deneyim sağlayacağına inanıyorum.
-        \n\n\tInviZible Pro; Tor, DNSCrypt ve Purple I2P modüllerini içerir.
+        \tInviZible Night’yu tercih ettiğiniz için teşekkürler. Gizliliğinizi artıracağına ve size sorunsuz bir çevrimiçi deneyim sağlayacağına inanıyorum.
+        \n\n\tInviZible Night; Tor, DNSCrypt ve Purple I2P modüllerini içerir.
         \n\n\tCihazınız rootluysa root kullanabilir veya yerel bir VPN üzerinden internet trafiğini doğrudan Tor, DNSCrypt ve I2P ağlarına yönlendirebilir.
         \n\n\tGizlilik Politikası:
-        \n\tInviZible Pro, herhangi bir kişisel veya hassas kullanıcı verisini toplamaz veya paylaşmaz.
+        \n\tInviZible Night, herhangi bir kişisel veya hassas kullanıcı verisini toplamaz veya paylaşmaz.
         \n\n\tTelif Hakkı © 2019-2026
         \n\tGarmatin Oleksandr
         \n\tinvizible.soft@gmail.com
         \n\tinvizible.net/en/privacy
     </string>
-    <string name="config_changes_dialog_message">Değişiklikleri kaydetmek ister misiniz? Bu işlem InviZible Pro’nun çalışmasını bozabilir.</string>
+    <string name="config_changes_dialog_message">Değişiklikleri kaydetmek ister misiniz? Bu işlem InviZible Night’nun çalışmasını bozabilir.</string>
     <string name="notification_channel_services">Çalışan servisler</string>
     <string name="notification_channel_update">Güncelleme bildirimleri</string>
     <string name="notification_channel_root">Root komut bildirimleri</string>

@@ -36,7 +36,7 @@
     <string name="discard_changes">تجاهل التغييرات</string>
     <string name="allow">سماح</string>
     <string name="deny">رفض</string>
-    <string name="message_no_root_used">يمكنك استخدام InviZible Pro مع وضع VPN المحلي، أو التطبيقات ذات الوكيل الخاص أو ميزة VPN المحلية في وضع الوكيل.</string>
+    <string name="message_no_root_used">يمكنك استخدام InviZible Night مع وضع VPN المحلي، أو التطبيقات ذات الوكيل الخاص أو ميزة VPN المحلية في وضع الوكيل.</string>
     <string name="drawer_menu_commonSettings">الإعدادات العامة</string>
     <string name="drawer_menu_DNSSettings">إعدادات DNSCrypt</string>
     <string name="drawer_menu_I2PDSettings">إعدادات I2P</string>
@@ -77,7 +77,7 @@
     <string name="write_file_error">خطأ في حفظ الملف!</string>
     <string name="pref_fast_itpd_autostart">بدء I2P بشكل تلقائي</string>
     <string name="pref_fast_all_through_ipro">توجيه كل حركة المرور من خلال InviZible</string>
-    <string name="message_no_root_used_kitkat">يمكنك استخدام InviZible Pro مع التطبيقات ذات الوكيل الخاص أو ميزة VPN المحلية في وضع الوكيل.</string>
+    <string name="message_no_root_used_kitkat">يمكنك استخدام InviZible Night مع التطبيقات ذات الوكيل الخاص أو ميزة VPN المحلية في وضع الوكيل.</string>
     <string name="drawer_menu_TorSettings">إعدادات تور</string>
     <string name="drawer_menu_fastSettings">إعدادات سريعة</string>
     <string name="pref_fast_all_through_tor">توجيه كل حركة المرور عبر تور</string>
@@ -123,7 +123,7 @@
     <string name="pref_fast_logs_summ">إظهار سجلات اتصال التطبيق في علامة التبويب DNS</string>
     <string name="pref_fast_block_http">احجب http</string>
     <string name="pref_fast_block_http_summ">رفض الاتصال بمنفذ http 80</string>
-    <string name="pref_fast_auto_update_summ">تحقق من تحديثات InviZible Pro والوحدات النمطية يوميًا</string>
+    <string name="pref_fast_auto_update_summ">تحقق من تحديثات InviZible Night والوحدات النمطية يوميًا</string>
     <string name="pref_fast_chek_update_summ">تحقق مما إذا كانت الإصدارات الجديدة متاحة الآن</string>
     <string name="pref_common_rogue_dhcp_detection">كشف DHCP المزيف</string>
     <string name="pref_fast_through_tor_update_summ">تحقق من التحديثات فقط باستخدام تور وعندما يكون تور قيد التشغيل</string>
@@ -132,10 +132,10 @@
     <string name="pref_common_notification_summ">حماية التطبيق من التعرض للقتل بواسطة أندرويد</string>
     <string name="pref_common_rogue_dhcp_detection_summ">اكتشف هجمات DHCP المزيفة في شبكات Wi-Fi.</string>
     <string name="pref_common_dns_rebind_protection_summ">احجب الموقع عند اكتشاف هجوم إعادة ربط DNS</string>
-    <string name="pref_common_proxy_summ">سيقوم InviZible Pro بإجراء كافة الاتصالات من خلال وكيل SOCKS5</string>
+    <string name="pref_common_proxy_summ">سيقوم InviZible Night بإجراء كافة الاتصالات من خلال وكيل SOCKS5</string>
     <string name="pref_common_compatibility_mode">وضع التوافق</string>
     <string name="pref_common_shell_control_summ" tools:ignore="TypographyDashes">استخدم الأمر التالي لإدارة وحدات التطبيق: \"am broadcast -a pan.alexander.tordnscrypt.SHELL_SCRIPT_CONTROL --ei dnscrypt 1 --ei tor 1 --ei i2p 1 %s\". حيث 1 - يبدأ، 0 - يوقف الوحدة.</string>
-    <string name="pref_common_notification_helper">يُرجى استبعاد InviZible Pro من تحسين بطارية أندرويد لمنع النظام من إنهاء DNSCrypt أو تور أو I2P في أي وقت. قد تتطلب بعض الأنظمة الخاصة، مثل MIUI، خطوات إضافية.</string>
+    <string name="pref_common_notification_helper">يُرجى استبعاد InviZible Night من تحسين بطارية أندرويد لمنع النظام من إنهاء DNSCrypt أو تور أو I2P في أي وقت. قد تتطلب بعض الأنظمة الخاصة، مثل MIUI، خطوات إضافية.</string>
     <string name="pref_common_compatibility_mode_summ">فعّل إذا كان جهازك مزودًا بذاكرة ROM مخصصة وانقطع الاتصال عند الضغط على زر البدء</string>
     <string name="pref_common_tor_route_all_summ">توجيه جميع حركة المرور الواردة عبر تور</string>
     <string name="notification_exclude_data_restriction_message">يُرجى السماح باستخدام بيانات الخلفية والسماح باستخدام البيانات أثناء تشغيل توفير البيانات. وهذا أمر ضروري لتجربة سلسة عبر الإنترنت.</string>
@@ -254,7 +254,7 @@
     <string name="pref_dnscrypt_blacklist_summ">القائمة السوداء مصنوعة من نمط واحد لكل سطر.</string>
     <string name="pref_dnscrypt_import_blacklist_summ">استيراد قائمة النطاقات أو ملف المضيفين. يمكنك اختيار ملفات متعددة، (سيتم إزالة السطور المكررة).</string>
     <string name="pref_dnscrypt_dns64_summ">قم بتنشيط هذا الخيار إذا كنت على شبكة IPv6 فقط وأصبحت مواقع IPv4 غير متوفرة. لا تقم بتمكينه بخلاف ذلك، وإلا فلن تتمكن من الاتصال بأي شيء على الإطلاق.</string>
-    <string name="pref_common_always_on_vpn_summ">فعّل VPN دائمًا وحظر الاتصالات بدون VPN لـ InviZible Pro لحجب الإنترنت عندما لا يكون Invisible Pro قيد التشغيل</string>
+    <string name="pref_common_always_on_vpn_summ">فعّل VPN دائمًا وحظر الاتصالات بدون VPN لـ InviZible Night لحجب الإنترنت عندما لا يكون Invisible Pro قيد التشغيل</string>
     <string name="pref_dnscrypt_import_forwarding_rules_summ">استيراد ملف قواعد إعادة التوجيه. يمكنك تحديد ملفات متعددة، (سيتم إزالة الأسطر المكررة).</string>
     <string name="pref_dnscrypt_http3_summ">تمكين دعم HTTP/3 (DoH3، HTTP عبر QUIC). لاحظ أنه، مثل DNSCrypt ولكن على عكس إصدارات HTTP الأخرى، يستخدم هذا UDP و (عادة) المنفذ 443 بدلاً من TCP.</string>
     <string name="pref_dnscrypt_forwarding_rules_summ">توجيه الاستعلامات لنطاقات محددة إلى مجموعة مخصصة من الخوادم.</string>
@@ -284,10 +284,10 @@
     <string name="update_checking_title">جارِ التحقق من التحديثات</string>
     <string name="update_found">عُثر على تحديثات.</string>
     <string name="update_fault">خطأ في التحديث.</string>
-    <string name="update_over_five_times">لقد تحققت من تحديثات InviZible Pro أكثر من 5 مرات في اليوم. يُرجى المحاولة مرة أخرى لاحقًا.</string>
-    <string name="ask_reset_settings_text">InviZible Pro لا يمكنه بدء %1$s! يُرجى محاولة إعادة تعيين إعدادات %2$s. إذا لم يفلح ذلك، يُرجى إعادة تشغيل جهازك.</string>
+    <string name="update_over_five_times">لقد تحققت من تحديثات InviZible Night أكثر من 5 مرات في اليوم. يُرجى المحاولة مرة أخرى لاحقًا.</string>
+    <string name="ask_reset_settings_text">InviZible Night لا يمكنه بدء %1$s! يُرجى محاولة إعادة تعيين إعدادات %2$s. إذا لم يفلح ذلك، يُرجى إعادة تشغيل جهازك.</string>
     <string name="proxy_server_empty_field_hint">يمكن ترك هذا الحقل فارغًا</string>
-    <string name="config_changes_dialog_message">هل تريد حفظ التغييرات؟ قد يؤدي ذلك إلى تعطيل InviZible Pro.</string>
+    <string name="config_changes_dialog_message">هل تريد حفظ التغييرات؟ قد يؤدي ذلك إلى تعطيل InviZible Night.</string>
     <string name="btn_new_tor_identity">هوية تور جديدة</string>
     <string name="firewall_notification_allow_app_title">%s مثبت</string>
     <string name="pref_firewall_show_all_apps">اعرض كل التطبيقات</string>
@@ -312,7 +312,7 @@
     <string name="pref_itpd_addressbook">دليل العناوين</string>
     <string name="pref_itpd_addressbook_defaulturl_summ">عنوان URL لاشتراك دليل العناوين للإعداد الأولي.</string>
     <string name="only_for_pro">للنُسخة PRO فقط</string>
-    <string name="donate_project">مشروع InviZible Pro يلتمس مساعدتكم. يُرجى زيارة صفحة التبرع أو إدخال الرمز المميز الذي تلقيته بالفعل.</string>
+    <string name="donate_project">مشروع InviZible Night يلتمس مساعدتكم. يُرجى زيارة صفحة التبرع أو إدخال الرمز المميز الذي تلقيته بالفعل.</string>
     <string name="main_fragment_access_i2p">الوصول إلى شبكة I2P باستخدام Purple I2P</string>
     <string name="main_fragment_protect_dns">دافع مع DNSCRYPT</string>
     <string name="proxy_save">احفظ وفعّل</string>
@@ -356,7 +356,7 @@
     <string name="action_mode_dialog_message_unlock">الرجاء إدخال كلمة السر.</string>
     <string name="help_activity_path">مسار السجلاّت:</string>
     <string name="action_mode_dialog_wrong_pass">كلمة سر خاطئة!</string>
-    <string name="update_core_restart">الرجاء إعادة تشغيل InviZible Pro والسماح بالتثبيت الكامل! بعد التثبيت، أعد ضبط نقطة الاتصال، إذا كنت تستخدمها!</string>
+    <string name="update_core_restart">الرجاء إعادة تشغيل InviZible Night والسماح بالتثبيت الكامل! بعد التثبيت، أعد ضبط نقطة الاتصال، إذا كنت تستخدمها!</string>
     <string name="update_notification">جارِ تنزيل الملف</string>
     <string name="cancel_download">ألغِ التنزيل</string>
     <string name="update_interrupt_notification">توقف التنزيل</string>
@@ -366,7 +366,7 @@
     <string name="update_check_no_update">لم يُعثر على أي تحديثات.</string>
     <string name="update_installed">ثُبِّتت التحديثات.</string>
     <string name="donate">تبرّع</string>
-    <string name="thanks_for_donate_gp">يعرب مشروع InviZible Pro ومؤلفه عن تقديرهما للمساعدة!</string>
+    <string name="thanks_for_donate_gp">يعرب مشروع InviZible Night ومؤلفه عن تقديرهما للمساعدة!</string>
     <string name="vpn_tor_tether_summ">الرجاء ضبط استخدام وسيط HTTP في إعدادات الجهاز المتصل. حدد العنوان: IP:10.1.10.1 المنفذ: %s</string>
     <string name="vpn_mode_off">وضع الـ VPN غير مُفعّل</string>
     <string name="reset_settings_title">انتباه</string>
@@ -421,9 +421,9 @@
     <string name="pref_tor_reduced_connections_padding_summ">إذا فُعّلت، فلن يحتفظ تور باتصالات جهاز التوجيه البصلي مفتوحًا لفترة طويلة جدًا، وسيرسل حشوًا أقل على هذه الاتصالات. فعّل لتوفير النطاق الترددي.</string>
     <string name="update_itpd_has_apdate">يتوفر تحديث Purple I2P. هل تريد تنزيله وتحديثه؟ سيستمر التحديث في الخلفية.</string>
     <string name="update_core_message">بعض وحدات InviZible جاهزة للتحديث. هل تريد تحديثها؟ هذا سيكتب فوق إعدادات وحداتك!</string>
-    <string name="thanks_for_donate">يعرب مشروع InviZible Pro ومؤلفه عن تقديرهما للمساعدة. هل ترغب في التنزيل والترقية إلى PRO؟ سيتواصل التحديث في الخلفية.</string>
+    <string name="thanks_for_donate">يعرب مشروع InviZible Night ومؤلفه عن تقديرهما للمساعدة. هل ترغب في التنزيل والترقية إلى PRO؟ سيتواصل التحديث في الخلفية.</string>
     <string name="proxy_exclude_apps_from_proxy_summ">قائمة التطبيقات التي تفتح مباشرةً. هذه التطبيقات لن تستخدم تور أو وسيط للاتصال بالإنترنت!</string>
-    <string name="agreement_text">شكرًا لاختيارك InviZible Pro. أنا واثق من أنه سيعزز خصوصيتك ويوفر لك تجربة سلسة عبر الإنترنت.\n\nيتضمن InviZible Pro كلاً من تور وDNSCrypt وPurple I2P كوحدات.\n\nيمكن لـ InviZible Pro استخدام صلاحيات الروت إذا كان جهازك يمتلكها، أو يستخدم VPN محليًا لتوجيه حركة مرور الإنترنت مباشرةً إلى شبكات تور وDNSCrypt وI2P.\n\nسياسة الخصوصية:\nلا يقوم InviZible Pro بجمع أو مشاركة أي بيانات شخصية أو حساسة للمستخدم.\n\nحقوق النشر © 2019-2026\nغارماتين أوليكساندر\ninvizible.soft@gmail.com\ninvizible.net/en/privacy</string>
+    <string name="agreement_text">شكرًا لاختيارك InviZible Night. أنا واثق من أنه سيعزز خصوصيتك ويوفر لك تجربة سلسة عبر الإنترنت.\n\nيتضمن InviZible Night كلاً من تور وDNSCrypt وPurple I2P كوحدات.\n\nيمكن لـ InviZible Night استخدام صلاحيات الروت إذا كان جهازك يمتلكها، أو يستخدم VPN محليًا لتوجيه حركة مرور الإنترنت مباشرةً إلى شبكات تور وDNSCrypt وI2P.\n\nسياسة الخصوصية:\nلا يقوم InviZible Night بجمع أو مشاركة أي بيانات شخصية أو حساسة للمستخدم.\n\nحقوق النشر © 2019-2026\nغارماتين أوليكساندر\ninvizible.soft@gmail.com\ninvizible.net/en/privacy</string>
     <string name="notification_dns_rebinding_text">اكتُشف هجوم إعادة ربط DNS محتمل! حُجب الموقع %s.</string>
     <string name="only_premium_feature">للأسف، هذه الميزة متاحة للنسخة المدفوعة فقط.</string>
     <string name="proxy_select_proxy_app">الرجاء تحديد تطبيق مالك الوسيط على الأقل، إذا كنت تستخدم وسيطً محليًا.</string>
@@ -505,7 +505,7 @@
     <string name="update_wrong_code">يبدو أن رمز PRO الخاص بك خاطئ. يُرجى التواصل مع المطوّر.</string>
     <string name="verifier_error">يبدو أن هذه نُسخة غير رسمية من InviZible. يُرجى الانتباه!</string>
     <string name="update_new_version">نُسخة جديدة:</string>
-    <string name="update_ipro_has_apdate">تحديث InviZible Pro متوفر. هل تريد تنزيله وتحديثه؟ سيتواصل التحديث في الخلفية.</string>
+    <string name="update_ipro_has_apdate">تحديث InviZible Night متوفر. هل تريد تنزيله وتحديثه؟ سيتواصل التحديث في الخلفية.</string>
     <string name="update_checking_message">الرجاء الانتظار أثناء التحقق من التحديثات.</string>
     <string name="update_check_warning">خادم التحديث غير متاح مؤقتًا. الرجاء المحاولة مرة أخرى لاحقًا.</string>
     <string name="donate_button">زُر</string>
@@ -517,7 +517,7 @@
     <string name="ask_reset_settings_btn">صفّر</string>
     <string name="add_custom_server_error">تضبيط خادم مخصّص غير صالح. يُرجى التحقق من حقل SDNS.</string>
     <string name="proxy_server_user_name">اسم المستخدم:</string>
-    <string name="buy_premium_gp">مشروع InviZible Pro يطلب مساعدتك. اضغط موافق لشراء الميزات المميزة.</string>
+    <string name="buy_premium_gp">مشروع InviZible Night يطلب مساعدتك. اضغط موافق لشراء الميزات المميزة.</string>
     <string name="wrong_purchase_signature_gp">عذرًا، لا يمكننا تأكيد عملية الشراء. ستتلقى المبلغ المسترد بعد 3 أيام.</string>
     <string name="proxy_exclude_apps_from_proxy">استبعد التطبيقات</string>
     <string name="proxy_use_for_non_tor">استخدم وسيطً للتطبيقات التي تتجاوز تور</string>

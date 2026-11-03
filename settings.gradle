@@ -1,3 +1,6 @@
+plugins {
+    id 'org.gradle.toolchains.foojay-resolver-convention' version '1.0.0'
+}
 include ':tordnscrypt', ':filepicker'
 project(':filepicker').projectDir = new File('android-filepicker/filepicker')
 //Please comment line below if you are not the project owner

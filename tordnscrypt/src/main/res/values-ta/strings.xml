@@ -36,7 +36,7 @@
     <string name="discard_changes">மாற்றங்களை கைவிடலாம்</string>
     <string name="deny">மறுக்கவும்</string>
     <string name="areYouSure">நீ சொல்வது உறுதியா\? இந்தச் செயலைச் செயல்தவிர்க்க முடியாது!</string>
-    <string name="message_no_root_used">உள்ளூர் VPN பயன்முறையில் InviZible Pro அல்லது சொந்த ப்ராக்ஸி அல்லது உள்ளூர் VPN அம்சத்துடன் கூடிய பயன்பாடுகளை ப்ராக்ஸி பயன்முறையில் பயன்படுத்தலாம்.</string>
+    <string name="message_no_root_used">உள்ளூர் VPN பயன்முறையில் InviZible Night அல்லது சொந்த ப்ராக்ஸி அல்லது உள்ளூர் VPN அம்சத்துடன் கூடிய பயன்பாடுகளை ப்ராக்ஸி பயன்முறையில் பயன்படுத்தலாம்.</string>
     <string name="message_no_root_used_kitkat">பதிலாள் பயன்முறையில் சொந்த பதிலாள் அல்லது உள்ளக விபிஎன் அம்சத்துடன் பயன்பாடுகளுடன் இன்விசிபிள் புரோவைப் பயன்படுத்தலாம்.</string>
     <string name="write_file_error">கோப்பை சேமிப்பதில் பிழை!</string>
     <string name="drawer_menu_commonSettings">பொதுவான அமைப்புகள்</string>
@@ -520,7 +520,7 @@
     <string name="update_wrong_code">உங்கள் புரோ குறியீடு தவறு என்று தெரிகிறது. டெவலப்பரைத் தொடர்பு கொள்ளவும்.</string>
     <string name="update_over_five_times">நீங்கள் ஒரு நாளைக்கு 5 முறைக்கு மேல் உள்ளார்ந்த சார்பு புதுப்பிப்புகளை சரிபார்த்தீர்கள். தயவுசெய்து பின்னர் மீண்டும் முயற்சிக்கவும்.</string>
     <string name="donate_button">வருகை</string>
-    <string name="agreement_text">InviZible Pro தேர்வு செய்ததற்கு நன்றி. இது உங்கள் தனியுரிமையை மேம்படுத்தும் மற்றும் மென்மையான நிகழ்நிலை அனுபவத்தை வழங்கும் என்று நான் நம்புகிறேன். \n\nInviZible Pro தொகுதிகளாக Tor, DNSCrypt மற்றும் ஊதா I2P ஆகியவை அடங்கும். \n\nஉங்கள் சாதனம் ரூட் செய்யப்பட்டிருந்தால் InviZible Pro ரூட்டைப் பயன்படுத்தலாம் அல்லது Tor, DNSCrypt மற்றும் I2P நெட்வொர்க்குகளுக்கு இணைய போக்குவரத்தை நேரடியாக வழங்க உள்ளக VPN ஐப் பயன்படுத்துகிறது. \n\nதனியுரிமைக் கொள்கை: \nInviZible Pro எந்தவொரு தனிப்பட்ட அல்லது முக்கியமான பயனர் தரவையும் சேகரிக்கவோ பகிரவோ இல்லை. \n\nபதிப்புரிமை © 2019-2026 \nகர்மாடின் ஓலெக்சாண்டர் \ninvizible.soft@gmail.com \ninvizible.net/en/privacy</string>
+    <string name="agreement_text">InviZible Night தேர்வு செய்ததற்கு நன்றி. இது உங்கள் தனியுரிமையை மேம்படுத்தும் மற்றும் மென்மையான நிகழ்நிலை அனுபவத்தை வழங்கும் என்று நான் நம்புகிறேன். \n\nInviZible Night தொகுதிகளாக Tor, DNSCrypt மற்றும் ஊதா I2P ஆகியவை அடங்கும். \n\nஉங்கள் சாதனம் ரூட் செய்யப்பட்டிருந்தால் InviZible Night ரூட்டைப் பயன்படுத்தலாம் அல்லது Tor, DNSCrypt மற்றும் I2P நெட்வொர்க்குகளுக்கு இணைய போக்குவரத்தை நேரடியாக வழங்க உள்ளக VPN ஐப் பயன்படுத்துகிறது. \n\nதனியுரிமைக் கொள்கை: \nInviZible Night எந்தவொரு தனிப்பட்ட அல்லது முக்கியமான பயனர் தரவையும் சேகரிக்கவோ பகிரவோ இல்லை. \n\nபதிப்புரிமை © 2019-2026 \nகர்மாடின் ஓலெக்சாண்டர் \ninvizible.soft@gmail.com \ninvizible.net/en/privacy</string>
     <string name="notification_channel_services">இயங்கும் சேவைகள்</string>
     <string name="toast_new_tor_identity">டோர் அடையாளம் மாறிவிட்டது</string>
     <string name="proxy_server_port">பதிலாள் போர்ட்:</string>

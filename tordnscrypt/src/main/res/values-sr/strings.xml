@@ -46,7 +46,7 @@
     <string name="areYouSure">Да ли сте сигурни? Ова радња се не може опозвати!</string>
     <string name="ask_reset_settings_btn">Ресет</string>
     <string name="ask_later">Питај касније</string>
-    <string name="ask_reset_settings_text">InviZible Pro не може да покрене %1$s! Покушајте да ресетујете подешавања %2$s. Ако ово не помогне, поново покрените уређај.</string>
+    <string name="ask_reset_settings_text">InviZible Night не може да покрене %1$s! Покушајте да ресетујете подешавања %2$s. Ако ово не помогне, поново покрените уређај.</string>
     <string name="btn_dnscrypt_delete_log">Избриши лог</string>
     <string name="btnRestoreBackup">Врати подешавања</string>
     <string name="btnSaveBackup">Сачувај подешавања</string>

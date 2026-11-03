@@ -1,0 +1,7 @@
+pan.alexander.tordnscrypt.test.tordnscrypt-jetified-core-1.7.0-0 /home/hex/.gradle/caches/9.1.0/transforms/0dec8fef3b89a56a49aa25b01caf4e8a/transformed/jetified-core-1.7.0/res
+pan.alexander.tordnscrypt.test.tordnscrypt-jetified-tracing-1.2.0-1 /home/hex/.gradle/caches/9.1.0/transforms/fe1daba5461083af830cf307b684cfe2/transformed/jetified-tracing-1.2.0/res
+pan.alexander.tordnscrypt.test.tordnscrypt-fdroidArm64-2 /home/hex/InviZible-Night/tordnscrypt/build/generated/res/resValues/androidTest/fdroidArm64/debug
+pan.alexander.tordnscrypt.test.tordnscrypt-updated_navigation_xml-3 /home/hex/InviZible-Night/tordnscrypt/build/generated/updated_navigation_xml/fdroidArm64DebugAndroidTest
+pan.alexander.tordnscrypt.test.tordnscrypt-packageFdroidArm64DebugAndroidTestResources-4 /home/hex/InviZible-Night/tordnscrypt/build/intermediates/incremental/fdroidArm64DebugAndroidTest/packageFdroidArm64DebugAndroidTestResources/merged.dir
+pan.alexander.tordnscrypt.test.tordnscrypt-packageFdroidArm64DebugAndroidTestResources-5 /home/hex/InviZible-Night/tordnscrypt/build/intermediates/incremental/fdroidArm64DebugAndroidTest/packageFdroidArm64DebugAndroidTestResources/stripped.dir
+pan.alexander.tordnscrypt.test.tordnscrypt-fdroidArm64DebugAndroidTest-6 /home/hex/InviZible-Night/tordnscrypt/build/intermediates/merged_res/fdroidArm64DebugAndroidTest/mergeFdroidArm64DebugAndroidTestResources

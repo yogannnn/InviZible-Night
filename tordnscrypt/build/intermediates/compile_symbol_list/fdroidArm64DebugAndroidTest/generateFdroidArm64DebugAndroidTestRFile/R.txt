@@ -1,0 +1,2 @@
+int string appProcVersion 0x0
+int string package_name 0x0

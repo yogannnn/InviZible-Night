@@ -52,8 +52,8 @@
     <string name="deny">Từ chối</string>
     <string name="areYouSure">Bạn chắc chứ? Hành động này không thể hoàn tác!</string>
     <string name="ask_later">Hỏi sau</string>
-    <string name="message_no_root_used">Bạn có thể sử dụng InviZible Pro với chế độ VPN cục bộ, hoặc các ứng dụng có proxy riêng hoặc tính năng VPN cục bộ trong chế độ proxy.</string>
-    <string name="message_no_root_used_kitkat">Bạn có thể sử dụng InviZible Pro với các ứng dụng có proxy riêng hoặc tính năng VPN cục bộ trong chế độ proxy.</string>
+    <string name="message_no_root_used">Bạn có thể sử dụng InviZible Night với chế độ VPN cục bộ, hoặc các ứng dụng có proxy riêng hoặc tính năng VPN cục bộ trong chế độ proxy.</string>
+    <string name="message_no_root_used_kitkat">Bạn có thể sử dụng InviZible Night với các ứng dụng có proxy riêng hoặc tính năng VPN cục bộ trong chế độ proxy.</string>
     <string name="write_file_error">Lỗi lưu tệp!</string>
     <string name="drawer_menu_commonSettings">Cài đặt chung</string>
     <string name="drawer_menu_DNSSettings">Cài đặt DNSCrypt</string>
@@ -126,7 +126,7 @@
     <string name="pref_fast_block_http">Chặn http</string>
     <string name="pref_fast_categ_update">Cập nhật</string>
     <string name="pref_fast_auto_update">Tự động cập nhật</string>
-    <string name="pref_fast_auto_update_summ">Kiểm tra cập nhật InviZible Pro và các mô-đun hàng ngày</string>
+    <string name="pref_fast_auto_update_summ">Kiểm tra cập nhật InviZible Night và các mô-đun hàng ngày</string>
     <string name="pref_fast_chek_update">Kiểm tra cập nhật</string>
     <string name="pref_fast_chek_update_summ">Kiểm tra xem có phiên bản mới nào khả dụng không</string>
     <string name="pref_fast_through_tor_update">Cập nhật một cách nghiêm ngặt qua Tor</string>
@@ -155,11 +155,11 @@
     <string name="pref_common_dns_rebind_protection_summ">Chặn trang web khi tấn công tái liên kết DNS được phát hiện</string>
     <string name="pref_common_proxy_categ">Proxy</string>
     <string name="pref_common_proxy">Sử dụng sock5 proxy</string>
-    <string name="pref_common_proxy_summ">InviZible Pro sẽ định tuyến mọi kết nối thông qua SOCKS5 proxy</string>
+    <string name="pref_common_proxy_summ">InviZible Night sẽ định tuyến mọi kết nối thông qua SOCKS5 proxy</string>
     <string name="pref_common_kill_switch">Công tắc ngắt</string>
     <string name="pref_common_kill_switch_summ">Chặn kết nối internet khi Tor, DNSCrypt và Purple I2P đã dừng</string>
     <string name="pref_common_refresh_rules">Làm mới quy tắc</string>
-    <string name="pref_common_always_on_vpn_summ">Kích hoạt Luôn bật VPN và chặn các kết nối không qua VPN cho phép InviZible Pro có thể chặn internet ngay khi ứng dụng không hoạt động</string>
+    <string name="pref_common_always_on_vpn_summ">Kích hoạt Luôn bật VPN và chặn các kết nối không qua VPN cho phép InviZible Night có thể chặn internet ngay khi ứng dụng không hoạt động</string>
     <string name="pref_common_refresh_rules_summ">Cập nhật quy tắc mỗi khi có sự thay đổi kết nối mạng</string>
     <string name="pref_common_show_notification">Hiện thông báo</string>
     <string name="pref_common_wakelock">Ngăn thiết bị ngủ</string>
@@ -171,7 +171,7 @@
     <string name="pref_common_shell_control">Kích hoạt điều khiển script</string>
     <string name="pref_common_shell_control_summ" tools:ignore="TypographyDashes">Sử dụng câu lệnh sau đây để quản lý mô-đun ứng dụng: \"am broadcast -a pan.alexander.tordnscrypt.SHELL_SCRIPT_CONTROL --ei dnscrypt 1 --ei tor 1 --ei i2p 1%s\". Khi 1 - khởi động, 0 - dừng mô-đun này.</string>
     <string name="notification_exclude_bat_optimisation_title">Ngừng tối ưu hoá sử dụng pin?</string>
-    <string name="pref_common_notification_helper">Vui lòng loại trừ InviZible Pro khỏi mục Tối ưu hoá pin của Android để hạn chế hệ thống khỏi ngắt DNSCrypt, Tor, hoặc I2P mọi lúc. Một số hệ thống đặc biệt, như MIUI, có thể cần thêm một số bước.</string>
+    <string name="pref_common_notification_helper">Vui lòng loại trừ InviZible Night khỏi mục Tối ưu hoá pin của Android để hạn chế hệ thống khỏi ngắt DNSCrypt, Tor, hoặc I2P mọi lúc. Một số hệ thống đặc biệt, như MIUI, có thể cần thêm một số bước.</string>
     <string name="notification_exclude_data_restriction_title">Tắt Tiết kiệm dữ liệu mạng?</string>
     <string name="notification_exclude_data_restriction_message">Vui lòng cho phép sử dụng dữ liệu trong nền và ngày cả khi Chế độ tiết kiệm dữ liệu đang bật. Điều này cần thiết cho trải nghiệm lướt mạng mượt mà.</string>
     <string name="pref_common_use_busybox">Chọn BusyBox</string>

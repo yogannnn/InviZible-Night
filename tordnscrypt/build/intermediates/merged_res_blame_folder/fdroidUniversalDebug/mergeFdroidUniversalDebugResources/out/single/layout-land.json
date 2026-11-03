@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "pan.alexander.tordnscrypt-mergeFdroidUniversalDebugResources-58:/layout-land/fragment_itpd_run.xml",
+        "source": "pan.alexander.tordnscrypt-main-64:/layout-land/fragment_itpd_run.xml"
+    },
+    {
+        "merged": "pan.alexander.tordnscrypt-mergeFdroidUniversalDebugResources-58:/layout-land/app_bar_main.xml",
+        "source": "pan.alexander.tordnscrypt-main-64:/layout-land/app_bar_main.xml"
+    },
+    {
+        "merged": "pan.alexander.tordnscrypt-mergeFdroidUniversalDebugResources-58:/layout-land/fragment_tor_run.xml",
+        "source": "pan.alexander.tordnscrypt-main-64:/layout-land/fragment_tor_run.xml"
+    },
+    {
+        "merged": "pan.alexander.tordnscrypt-mergeFdroidUniversalDebugResources-58:/layout-land/fragment_dnscrypt_run.xml",
+        "source": "pan.alexander.tordnscrypt-main-64:/layout-land/fragment_dnscrypt_run.xml"
+    },
+    {
+        "merged": "pan.alexander.tordnscrypt-mergeFdroidUniversalDebugResources-58:/layout-land/content_main.xml",
+        "source": "pan.alexander.tordnscrypt-main-64:/layout-land/content_main.xml"
+    }
+]

@@ -1,0 +1,13 @@
+#Tue Nov 03 16:13:47 GMT+05:00 2026
+base.0=/home/hex/InviZible-Night/tordnscrypt/build/intermediates/dex/fdroidArm64DebugAndroidTest/mergeExtDexFdroidArm64DebugAndroidTest/classes.dex
+base.1=/home/hex/InviZible-Night/tordnscrypt/build/intermediates/dex/fdroidArm64DebugAndroidTest/mergeProjectDexFdroidArm64DebugAndroidTest/0/classes.dex
+base.2=/home/hex/InviZible-Night/tordnscrypt/build/intermediates/dex/fdroidArm64DebugAndroidTest/mergeProjectDexFdroidArm64DebugAndroidTest/7/classes.dex
+base.3=/home/hex/InviZible-Night/tordnscrypt/build/intermediates/global_synthetics_dex/fdroidArm64DebugAndroidTest/mergeFdroidArm64DebugAndroidTestGlobalSynthetics/classes.dex
+path.0=classes.dex
+path.1=0/classes.dex
+path.2=7/classes.dex
+path.3=classes.dex
+renamed.0=classes.dex
+renamed.1=classes2.dex
+renamed.2=classes3.dex
+renamed.3=classes4.dex

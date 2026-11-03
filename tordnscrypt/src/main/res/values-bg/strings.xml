@@ -13,7 +13,7 @@
     <string name="discard_changes">Отхвърли промените</string>
     <string name="deny">Откажи</string>
     <string name="ask_later">Попитайте по-късно</string>
-    <string name="message_no_root_used_kitkat">Можете да използвате InviZible Pro с приложения със собствен прокси или локална VPN функция в прокси режим.</string>
+    <string name="message_no_root_used_kitkat">Можете да използвате InviZible Night с приложения със собствен прокси или локална VPN функция в прокси режим.</string>
     <string name="write_file_error">Запази файла Грешка!</string>
     <string name="drawer_menu_commonSettings">Общи настройки</string>
     <string name="drawer_menu_DNSSettings">DNSCrypt Настройки</string>
@@ -78,7 +78,7 @@
     <string name="pref_fast_dns_autostart">Автоматично стартиране DNSCrypt</string>
     <string name="pref_fast_itpd_autostart">Автоматично стартиране I2P</string>
     <string name="exit">Изход</string>
-    <string name="message_no_root_used">Можете да използвате InviZible Pro с локален VPN режим или приложения със собствен прокси или локална VPN функция в прокси режим.</string>
+    <string name="message_no_root_used">Можете да използвате InviZible Night с локален VPN режим или приложения със собствен прокси или локална VPN функция в прокси режим.</string>
     <string name="pref_fast_autostart_delay_summ">Използвай забавяне (секунди) само ако автоматичното стартиране не работи правилно</string>
     <string name="pref_fast_unlock_with_tor_summ">Списък със сайтове за отваряне с Tor. Тази функция не работи за сайтове зад CDN</string>
     <string name="pref_fast_unlock_apps_with_ipro_summ">Списък с приложения за използване с InviZible</string>
@@ -113,7 +113,7 @@
     <string name="pref_common_compatibility_mode_summ">Активирайте, ако вашето устройство е с персонализиран ROM и връзката се загуби, когато натиснете бутона START</string>
     <string name="pref_common_show_help">Помощни съобщения</string>
     <string name="pref_common_show_help_summ">Винаги показвай съобщенията за помощ</string>
-    <string name="pref_common_notification_helper">Моля, изключете InviZible Pro от оптимизацията на батерията на Android, за да попречите на системата да прекрати DNSCrypt, Tor или I2P по всяко време. Някои специални системи, като MIUI, може да изискват допълнителни стъпки.</string>
+    <string name="pref_common_notification_helper">Моля, изключете InviZible Night от оптимизацията на батерията на Android, за да попречите на системата да прекрати DNSCrypt, Tor или I2P по всяко време. Някои специални системи, като MIUI, може да изискват допълнителни стъпки.</string>
     <string name="pref_fast_tor_bypass_lan_summ">Не използвайте Tor за LAN дестинации и IANA запазени IP блокирване</string>
     <string name="pref_fast_use_tor_bridges_deactivate">Моля, първо деактивирайте bridge!</string>
     <string name="pref_fast_use_tor_bridges_ipv6">IPv6 bridges</string>
@@ -178,7 +178,7 @@
     <string name="pref_fast_block_http">Блокирай http</string>
     <string name="pref_fast_categ_update">Актуализация</string>
     <string name="pref_fast_auto_update">Автоматични актуализации</string>
-    <string name="pref_fast_auto_update_summ">Проверявай ежедневно актуализациите на InviZible Pro и модулите</string>
+    <string name="pref_fast_auto_update_summ">Проверявай ежедневно актуализациите на InviZible Night и модулите</string>
     <string name="pref_fast_chek_update">Проверка за актуализация</string>
     <string name="pref_fast_through_tor_update">Актуализирай стриктно през Tor</string>
     <string name="pref_common_categ_run_with_root">Използвай Root привилегии</string>
@@ -192,7 +192,7 @@
     <string name="pref_common_dns_rebind_protection_summ">Блокиране на сайта, когато бъде открита атака за повторно свързване на DNS</string>
     <string name="pref_common_proxy_categ">Прокси</string>
     <string name="pref_common_proxy">Използвайте socks5 прокси</string>
-    <string name="pref_common_proxy_summ">InviZible Pro ще направи всички връзки през SOCKS5 прокси</string>
+    <string name="pref_common_proxy_summ">InviZible Night ще направи всички връзки през SOCKS5 прокси</string>
     <string name="pref_common_kill_switch">Превключвател за изключване</string>
     <string name="pref_common_refresh_rules">Правила за опресняване</string>
     <string name="notification_waiting_network">Изчаква се мрежа…</string>

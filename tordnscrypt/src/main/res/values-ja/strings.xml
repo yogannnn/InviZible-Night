@@ -41,7 +41,7 @@
     <string name="agree">"同意します"</string>
     <string name="disagree">"同意しません"</string>
     <string name="message_no_root_used">"Invizible ProをVPN ModeでローカルVPNまたは、Proxy Modeでローカルプロキシとして使用できます"</string>
-    <string name="message_no_root_used_kitkat">"You can use InviZible Pro with applications with own proxy or local VPN feature in proxy mode."</string>
+    <string name="message_no_root_used_kitkat">"You can use InviZible Night with applications with own proxy or local VPN feature in proxy mode."</string>
     <string name="write_file_error">"ファイルの保存でエラーが発生しました！"</string>
     <string name="drawer_menu_commonSettings">"一般設定"</string>
     <string name="drawer_menu_DNSSettings">"DNSCrypt 設定"</string>
@@ -103,7 +103,7 @@
     <string name="pref_fast_block_http_summ">"http接続(ポート80)を拒否する"</string>
     <string name="pref_fast_categ_update">"アップデート"</string>
     <string name="pref_fast_auto_update">自動アップデート</string>
-    <string name="pref_fast_auto_update_summ">毎日InviZible Proとモジュールの更新をチェックする</string>
+    <string name="pref_fast_auto_update_summ">毎日InviZible Nightとモジュールの更新をチェックする</string>
     <string name="pref_fast_chek_update">アップデートの確認</string>
     <string name="pref_fast_chek_update_summ">"新しいバージョンがあるか確認する"</string>
     <string name="pref_fast_through_tor_update">"アップデートにTor接続を強制する"</string>
@@ -317,15 +317,15 @@
     <string name="update_installed">"アップデートがインストールされました。"</string>
     <string name="update_over_three_activations">"Looks like you have activated 3 copies of InviZible with this code already. If it is wrong, please contact the developer."</string>
     <string name="update_wrong_code">"Looks like your PRO code is wrong. Please contact the developer."</string>
-    <string name="update_over_five_times">"You checked InviZible Pro updates more than 5 times a day. Please try again later."</string>
+    <string name="update_over_five_times">"You checked InviZible Night updates more than 5 times a day. Please try again later."</string>
     <string name="verifier_error">"Looks like this unofficial version of InviZible. Please be care of it!"</string>
     <string name="only_for_pro">"Proバージョンのみ"</string>
     <string name="donate">"寄付"</string>
-    <string name="donate_project">"InviZible Pro Project seeks your assistance. Please visit donate page or enter received registration code."</string>
+    <string name="donate_project">"InviZible Night Project seeks your assistance. Please visit donate page or enter received registration code."</string>
     <string name="donate_button">"寄付する"</string>
     <string name="enter_code_button">"コードを入力"</string>
     <string name="enter_code">"コードを入力"</string>
-    <string name="thanks_for_donate">"InviZible Pro Project and its author express appreciation for the assistance. Would you like to download and upgrade to PRO? The update will continue in the background."</string>
+    <string name="thanks_for_donate">"InviZible Night Project and its author express appreciation for the assistance. Would you like to download and upgrade to PRO? The update will continue in the background."</string>
     <string name="pref_dnscrypt_relays_summ">"使用可能なリレーの一覧"</string>
     <string name="vpn_mode_active">"VPNモードは有効です"</string>
     <string name="vpn_mode_off">"VPNモードは無効てす"</string>
@@ -338,7 +338,7 @@
     <string name="add_custom_server_title">"カスタムサーバーを追加"</string>
     <string name="add_custom_server_error">"カスタムサーバー設定が無効です。SDNSの項目をご確認ください。"</string>
     <string name="pending_purchase">"Please note that you have a pending purchase:"</string>
-    <string name="buy_premium_gp">"InviZible Pro Project seeks your assistance. Press OK to purchase premium features."</string>
+    <string name="buy_premium_gp">"InviZible Night Project seeks your assistance. Press OK to purchase premium features."</string>
     <string name="wrong_purchase_signature_gp">"申し訳ありません、支払いを確認できませんでした。3日後に返金が行われます。"</string>
     <string name="only_premium_feature">"残念ながらこの機能は有料バージョンのみです。"</string>
     <string name="pref_itpd_use_HTTP_outproxy">"HTTP出力プロキシ"</string>
@@ -468,7 +468,7 @@
     <string name="btnResetSettings">"Reset Settings"</string>
     <string name="backupSaved">"Backup saved"</string>
     <string name="backupRestored">"Backup restored"</string>
-    <string name="thanks_for_donate_gp">"InviZible Pro Project and its author express appreciation for the assistance."</string>
+    <string name="thanks_for_donate_gp">"InviZible Night Project and its author express appreciation for the assistance."</string>
     <string name="pref_tor_hardware_accel_summ">"Try to use built-in crypto hardware acceleration when available."</string>
     <string name="notification_connecting">"Connecting…"</string>
     <string name="notification_waiting_network">"Waiting for network…"</string>
