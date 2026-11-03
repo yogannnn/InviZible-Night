@@ -16,6 +16,32 @@ jobs:
           submodules: recursive
           fetch-depth: 0
 
+      - name: Merge upstream
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git remote add upstream https://github.com/Gedsh/InviZible.git || true
+          git fetch upstream
+          UPSTREAM_BRANCH=$(git remote show upstream | grep 'HEAD branch' | cut -d' ' -f5)
+          echo "Upstream default branch: $UPSTREAM_BRANCH"
+          if git merge upstream/$UPSTREAM_BRANCH --no-edit -m "Auto-merge upstream ($UPSTREAM_BRANCH) into night"; then
+            echo "✅ Merge successful"
+          else
+            echo "::error::Merge conflict with upstream. Resolve locally: git pull, fix conflicts, git push."
+            exit 1
+          fi
+
+      - name: Get version
+        id: meta
+        run: |
+          BASE_VERSION=$(grep -oP 'versionName "\K[^"]+' tordnscrypt/build.gradle | head -1)
+          VERSION="${BASE_VERSION}-Night"
+          DATE=$(date +'%Y%m%d')
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+          echo "base_version=$BASE_VERSION" >> $GITHUB_OUTPUT
+          echo "date=$DATE" >> $GITHUB_OUTPUT
+          echo "Base version: $BASE_VERSION → Release version: $VERSION, date: $DATE"
+
       - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
@@ -41,8 +67,33 @@ jobs:
           chmod +x ./gradlew
           ./gradlew assembleFdroidUniversalRelease
 
-      - name: Upload APK
-        uses: actions/upload-artifact@v4
+      - name: Rename APK
+        run: |
+          cd tordnscrypt/build/outputs/apk/fdroidUniversal/release/
+          for f in *.apk; do
+            mv "$f" "InviZible-Night-v${{ steps.meta.outputs.version }}-build${{ github.run_number }}.apk"
+          done
+          ls -la
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
         with:
-          name: InviZible-Night-APK
-          path: tordnscrypt/build/outputs/apk/fdroidUniversal/release/*.apk
+          files: tordnscrypt/build/outputs/apk/fdroidUniversal/release/*.apk
+          tag_name: v${{ steps.meta.outputs.version }}.${{ steps.meta.outputs.date }}.${{ github.run_number }}
+          name: InviZible Night v${{ steps.meta.outputs.version }} — ${{ steps.meta.outputs.date }} (build ${{ github.run_number }})
+          draft: false
+          prerelease: true
+          body: |
+            Automated nightly build of **InviZible Night**.
+            
+            - **Base version** (from upstream): ${{ steps.meta.outputs.base_version }}
+            - **Release version**: ${{ steps.meta.outputs.version }}
+            - **Date**: ${{ steps.meta.outputs.date }}
+            - **Build**: #${{ github.run_number }}
+            - **Commit**: ${{ github.sha }}
+            
+            Based on upstream [InviZible Pro](https://github.com/Gedsh/InviZible) by Gedsh.
+            
+            **Install**: This APK installs alongside the official InviZible Pro (different application ID).
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
