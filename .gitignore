@@ -1,0 +1,35 @@
+# --- СЕКРЕТЫ И КЛЮЧИ (КРИТИЧЕСКИ ВАЖНО) ---
+*.jks
+*.keystore
+release-key.jks
+keystore.properties
+
+# --- СБОРОЧНЫЕ ФАЙЛЫ ANDROID ---
+*.iml
+.gradle/
+local.properties
+/.idea/
+.DS_Store
+build/
+captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+*.aab
+*.ap_
+*.dex
+*.class
+bin/
+gen/
+out/
+release/
+# Файлы, созданные во время нативной сборки C++
+obj/
+
+# --- ЛОКАЛЬНЫЕ КОНФИГУРАЦИИ ---
+!/.idea/codeStyles/
+!/.idea/fileTemplates/
+!/.idea/inspectionProfiles/
+!/.idea/scopes/
+!/.idea/encodings.xml
+!/.idea/vcs.xml
