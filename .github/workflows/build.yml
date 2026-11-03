@@ -5,7 +5,6 @@ on:
     branches: [ night ]
   workflow_dispatch:
 
-# Даем роботу права на создание релизов
 permissions:
   contents: write
 
@@ -83,18 +82,17 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           files: tordnscrypt/build/outputs/apk/fdroidUniversal/release/*.apk
-          # Уникальный тег: версия + дата + номер запуска + номер попытки (защита от дублей)
           tag_name: v${{ steps.meta.outputs.version }}.${{ steps.meta.outputs.date }}.${{ github.run_number }}-${{ github.run_attempt }}
           name: InviZible Night v${{ steps.meta.outputs.version }} — ${{ steps.meta.outputs.date }} (build ${{ github.run_number }}.${{ github.run_attempt }})
           draft: false
           prerelease: true
-          overwrite: true # Автоматически перезаписывает, если тег уже есть
+          overwrite: true
           body: |
             Automated nightly build of **InviZible Night**.
             
             - **Base version** (from upstream): ${{ steps.meta.outputs.base_version }}
             - **Release version**: ${{ steps.meta.outputs.version }}
-            - **Date**: ${{ steps.meta.outputs.date git add .github/workflows/build.yml}}
+            - **Date**: ${{ steps.meta.outputs.date }}
             - **Build**: #${{ github.run_number }} (attempt ${{ github.run_attempt }})
             - **Commit**: ${{ github.sha }}
             
