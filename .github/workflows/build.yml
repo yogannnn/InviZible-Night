@@ -85,7 +85,7 @@ jobs:
           tag_name: v${{ steps.meta.outputs.version }}.${{ steps.meta.outputs.date }}.${{ github.run_number }}-${{ github.run_attempt }}
           name: InviZible Night v${{ steps.meta.outputs.version }} — ${{ steps.meta.outputs.date }} (build ${{ github.run_number }}.${{ github.run_attempt }})
           draft: false
-          prerelease: true
+          prerelease: false
           overwrite: true
           body: |
             Automated nightly build of **InviZible Night**.
