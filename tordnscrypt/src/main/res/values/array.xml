@@ -591,7 +591,7 @@
     <string-array name="default_itpd_subscriptions">
         <item>http://stats.i2p/cgi-bin/newhosts.txt</item>
         <item>http://i2p-projekt.i2p/hosts.txt</item>
-        <item>http://notbob.i2p/hosts-all.txt</item>
+        <item>http://joajgazyztfssty4w2on5oaqksz6tqoxbduy553y34mf4byv6gpq.b32.i2p/export/alive-hosts.txt</item>
     </string-array>
     <string-array name="contains_own_tor">
         <item>org.torproject.torbrowser_alpha</item>
