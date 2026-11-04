@@ -93,7 +93,6 @@ jobs:
             - **Base version** (from upstream): ${{ steps.meta.outputs.base_version }}
             - **Release version**: ${{ steps.meta.outputs.version }}
             - **Date**: ${{ steps.meta.outputs.date }}
-            - **Build**: \#${{ github.run_number }} (attempt ${{ github.run_attempt }})
             - **Commit**: ${{ github.sha }}
             
             Based on upstream [InviZible Pro](https://github.com/Gedsh/InviZible) by Gedsh.
