@@ -68,11 +68,11 @@ jobs:
           KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
         run: |
           chmod +x ./gradlew
-          ./gradlew assembleFdroidUniversalRelease
+          ./gradlew assembleFdroidArm64Release
 
       - name: Rename APK
         run: |
-          cd tordnscrypt/build/outputs/apk/fdroidUniversal/release/
+          cd tordnscrypt/build/outputs/apk/fdroidArm64/release/
           for f in *.apk; do
             mv "$f" "InviZible-Night-v${{ steps.meta.outputs.version }}-build${{ github.run_number }}.apk"
           done
@@ -81,7 +81,7 @@ jobs:
       - name: Create Release
         uses: softprops/action-gh-release@v2
         with:
-          files: tordnscrypt/build/outputs/apk/fdroidUniversal/release/*.apk
+          files: tordnscrypt/build/outputs/apk/fdroidArm64/release/*.apk
           tag_name: v${{ steps.meta.outputs.version }}.${{ steps.meta.outputs.date }}.${{ github.run_number }}-${{ github.run_attempt }}
           name: InviZible Night v${{ steps.meta.outputs.version }} — ${{ steps.meta.outputs.date }} (build ${{ github.run_number }}.${{ github.run_attempt }})
           draft: false
