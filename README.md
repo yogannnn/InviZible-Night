@@ -1,82 +1,196 @@
 # InviZible Night
 
-> ⚠️ This is a FORK of [InviZible Pro](https://github.com/Gedsh/InviZible).
-> The original project is developed by Garmatin Oleksandr ([@Gedsh](https://github.com/Gedsh)).
-> This fork is maintained independently and is not affiliated with the original author.
-> Please report issues specific to this fork here, not to the original repository.
+**An independent community fork of [InviZible
+Pro](https://github.com/Gedsh/InviZible).**
 
-![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)
+> 🌙 **InviZible Night is an unofficial, independently maintained
+> fork.**
+>
+> The original InviZible Pro project was created and is maintained by
+> **Garmatin Oleksandr ([@Gedsh](https://github.com/Gedsh))**. This
+> repository preserves that attribution and acknowledges the original
+> project as the foundation of this fork.
+>
+> InviZible Night is not an official release of InviZible Pro. It is
+> maintained separately and is not endorsed by, or affiliated with, the
+> original author.
 
-A custom build of InviZible Pro with a different Tor bridges source, updated I2P subscriptions, and a separate application ID so it can coexist with the original app.
+[![License: GPL v3 or
+later](https://img.shields.io/badge/License-GPLv3%2B-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.html)
 
-## What's different in this fork
+## About this fork
 
-- Application ID: `com.yogannnn.invizible.night` — installs alongside the official InviZible Pro.
-- App name: "InviZible Night".
-- Tor bridges: uses vanilla bridges from bridges.torproject.org as the default source.
-- I2P subscriptions: replaced notbob.i2p with inr.i2p.
-- More changes may come. See commit history for details.
+InviZible Night exists because its maintainer wants to explore a
+somewhat different set of defaults and source-selection policies while
+continuing the work on the basis of InviZible Pro.
 
-Note: This fork is built automatically via GitHub Actions from the `night` branch. Pre-built APKs are available in the Actions tab.
+The differences described below are **technical and project-direction
+choices**. They should not be read as a criticism of the original author
+or as a claim that the original project is unsafe or improperly
+maintained. The original author is entitled to make different choices
+for the original application; this fork makes no claim to represent his
+views.
+
+### Current differences
+
+-   **Separate application ID:** `com.yogannnn.invizible.night`.
+    InviZible Night can be installed alongside the official InviZible
+    Pro, subject to Android's normal package/signature rules.
+-   **Separate app name:** `InviZible Night`.
+-   **Tor bridges:** the current default source is [Tor Project's bridge
+    distribution service](https://bridges.torproject.org/). This fork
+    does not adopt a blanket rule that bridge information must only ever
+    come from `torproject.org`: publicly available sources hosted on
+    GitHub are not excluded as a matter of principle. Any additional
+    source must actually be supported/configured in the relevant build;
+    this statement does not mean that every GitHub bridge list is
+    automatically trusted or enabled.
+-   **I2P subscriptions:** this fork is configured to use `inr.i2p`
+    instead of `notbob.i2p`.
+
+### A note on source selection
+
+The choice of bridge and subscription sources is one of the areas where
+the maintainer's preferences differ from the preferences of the original
+project.
+
+For I2P subscriptions in particular, the maintainer has concerns about
+the transparency of source-selection and content-filtering policies and
+therefore prefers a different subscription source. This is a statement
+of the maintainer's preference and rationale, **not a claim that
+wrongdoing by the operators of `notbob.i2p` has been proven**.
+
+Likewise, allowing for GitHub-hosted Tor bridge sources does not mean
+that every such source is reliable. Sources should be assessed on their
+provenance, maintenance, integrity, and suitability. Users should make
+their own decisions about which sources they trust.
+
+These choices are not presented as the only correct approach. They are
+simply the direction taken by this independent fork.
+
+## Relationship with the original project
+
+-   **Original project:** [InviZible
+    Pro](https://github.com/Gedsh/InviZible)
+-   **Original author:** [Garmatin Oleksandr
+    (@Gedsh)](https://github.com/Gedsh)
+-   **Official website:** [invizible.net](https://invizible.net)
+
+InviZible Pro combines Tor, DNSCrypt, and Purple I2P to provide privacy
+and network-security tools. InviZible Night builds on that work, while
+maintaining its own repository, build configuration, release artifacts,
+and support channel.
+
+Please report issues that are specific to InviZible Night in **this
+repository**. For issues that also affect the original InviZible Pro, or
+for help with the official application, please use the [original
+repository](https://github.com/Gedsh/InviZible) and its support
+channels.
+
+Please do not direct users of the original application to this fork for
+official support, and do not attribute changes or issues introduced by
+this fork to the original author.
 
 ## Installation
 
-1. Download the latest APK from the Actions tab (artifact `InviZible-Night-APK`).
-2. Install it. Because the application ID is different, it will not conflict with the official InviZible Pro.
-3. You can run both apps side by side.
+1.  Open the [Actions
+    tab](https://github.com/yogannnn/InviZible-Night/actions) in this
+    repository.
+2.  Select a successful workflow run for the `night` branch.
+3.  Download the `InviZible-Night-APK` artifact.
+4.  Install the APK on your Android device.
+
+Because the fork uses a different application ID, it is designed to
+coexist with the official InviZible Pro. Android may still require you
+to allow installation from the source you use. Builds distributed here
+are unofficial and are maintained independently from the original
+project's releases.
 
 ## Building from source
 
-Clone with submodules (required — the project uses android-filepicker):
+Clone the repository, including its submodules (required by the project,
+including `android-filepicker`):
 
-    git clone --recursive https://github.com/yogannnn/InviZible-Night
-    cd InviZible-Night
-    git checkout night
+``` bash
+git clone --recursive https://github.com/yogannnn/InviZible-Night.git
+cd InviZible-Night
+git checkout night
+```
 
-Open in Android Studio (JDK 17, Android SDK 37, NDK 23.1.7779620).
+Open the project in Android Studio. The current build setup uses:
 
-To build a release APK:
+-   JDK 17
+-   Android SDK 37
+-   NDK 23.1.7779620
 
-    ./gradlew assembleFdroidUniversalRelease
+To build the release APK:
 
-Signing is configured via environment variables (KEYSTORE_PASSWORD, KEY_ALIAS, KEY_PASSWORD) and a release-key.jks file. For local builds you can also create a keystore.properties file in the project root.
+``` bash
+./gradlew assembleFdroidUniversalRelease
+```
 
-## Original project
+Signing is configured through the `KEYSTORE_PASSWORD`, `KEY_ALIAS`, and
+`KEY_PASSWORD` environment variables and a `release-key.jks` file. For
+local builds, a `keystore.properties` file can also be created in the
+project root.
 
-InviZible Pro combines the strengths of Tor, DNSCrypt, and Purple I2P to provide a comprehensive solution for online privacy, security, and anonymity.
+Build requirements and signing configuration may change as the fork
+develops. Check the workflow files and Gradle configuration for the
+exact settings used by a particular revision.
 
-- Original repository: https://github.com/Gedsh/InviZible
-- Official site: https://invizible.net
-- F-Droid: https://f-droid.org/packages/pan.alexander.tordnscrypt.stable/
-- Google Play: https://play.google.com/store/apps/details?id=pan.alexander.tordnscrypt.gp
+## License and copyright
 
-For documentation, wiki, and support, please refer to the original project.
+InviZible Night is distributed under the **GNU General Public License,
+version 3 or (at your option) any later version**, as stated by the
+project licensing terms.
 
-## License
+-   The original InviZible Pro code and contributions remain attributed
+    to their respective copyright holders. Existing upstream copyright
+    and license notices should be preserved.
+-   Copyright in modifications made specifically for this fork: **© 2026
+    yogannnn**, to the extent those modifications are copyrightable and
+    owned by the maintainer.
 
-GNU General Public License version 3: https://www.gnu.org/licenses/gpl-3.0.txt
+This fork does not claim ownership of the original InviZible Pro code,
+its name, or the work of its contributors.
 
-Original work: Copyright (c) 2019-2026 Garmatin Oleksandr <invizible.soft@gmail.com>
+The GPL permits redistribution and modification subject to its terms.
+When distributing binaries, this project must also meet the applicable
+GPL requirements for providing the corresponding source code and
+preserving required notices.
 
-Modifications in this fork: Copyright (c) 2026 yogannnn
+See the [GNU GPL v3 text](https://www.gnu.org/licenses/gpl-3.0.html) and
+the `LICENSE` file in this repository for the license terms.
 
-This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+## Third-party projects and components
 
-This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+InviZible Pro, and therefore this fork, uses or builds upon work from
+other projects, including:
 
-You should have received a copy of the GNU General Public License along with this program. If not, see https://www.gnu.org/licenses/.
+-   [DNSCrypt](https://github.com/DNSCrypt/dnscrypt-proxy)
+-   [Tor](https://www.torproject.org/)
+-   [Purple I2P / i2pd](https://github.com/PurpleI2P/i2pd)
+-   [Chainfire/libsuperuser](https://github.com/Chainfire/libsuperuser)
+-   [jaredrummler/AndroidShell](https://github.com/jaredrummler/AndroidShell)
+-   [NetGuard](https://github.com/M66B/NetGuard)
+-   [Angads25/android-filepicker](https://github.com/Angads25/android-filepicker)
+-   [meefik/busybox](https://github.com/meefik/busybox)
 
-## Attribution (from the original project)
+This list is provided for attribution and orientation; it may not be
+exhaustive. Each component remains subject to its own license and terms.
+Please consult the relevant upstream repositories and the license/notice
+files included with the source.
 
-InviZible Pro uses:
+This product is produced independently from the Tor, DNSCrypt, and
+Purple I2P projects. Those projects do not endorse this fork and make no
+guarantees about its quality, suitability, or operation.
 
-- DNSCrypt: https://github.com/jedisct1/dnscrypt-proxy
-- Tor: https://www.torproject.org/
-- Purple I2P: https://github.com/PurpleI2P/i2pd
-- Chainfire/libsuperuser: https://github.com/Chainfire/libsuperuser
-- jaredrummler/AndroidShell: https://github.com/jaredrummler/AndroidShell
-- NetGuard: https://github.com/M66B/NetGuard
-- Angads25/android-filepicker: https://github.com/Angads25/android-filepicker
-- meefik/busybox: https://github.com/meefik/busybox
+## Acknowledgement
 
-This product is produced independently from the Tor®, DNSCrypt, Purple I2P software and carries no guarantee from The Above Projects about quality, suitability or anything else.
+Thank you to **Garmatin Oleksandr (@Gedsh)** and all contributors to
+InviZible Pro and its dependencies. InviZible Night would not exist in
+its current form without their work.
+
+The purpose of this fork is not to erase, replace, or diminish that
+work. It is to maintain an alternative build with a different set of
+preferences and to make those differences visible to users.
