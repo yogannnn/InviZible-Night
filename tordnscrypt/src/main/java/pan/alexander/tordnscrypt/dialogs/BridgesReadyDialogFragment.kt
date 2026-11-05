@@ -71,7 +71,7 @@ class BridgesReadyDialogFragment : ExtendedDialogFragment() {
             setPositiveButton(R.string.pref_fast_use_tor_bridges_add_dialog) { _, _ ->
                 val preferencesTorBridges = parentFragment as? PreferencesTorBridges
                 if (preferencesTorBridges != null && bridges.isNotEmpty()) {
-                    preferencesTorBridges.readSavedCustomBridges(bridges)
+                    preferencesTorBridges.readSavedCustomBridges(bridges, source == "github")
                 } else {
                     Toast.makeText(requireActivity(), "Unable to save bridges!", Toast.LENGTH_LONG)
                         .show()

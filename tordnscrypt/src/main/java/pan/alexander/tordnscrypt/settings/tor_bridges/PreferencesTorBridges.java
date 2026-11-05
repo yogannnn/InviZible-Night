@@ -176,6 +176,7 @@ public class PreferencesTorBridges extends Fragment implements View.OnClickListe
 
     private BridgeType currentBridgesType = undefined;
     private String requestedBridgesToAdd;
+    private boolean requestedBridgesIsGithub = false;
     private BridgesSelector savedBridgesSelector;
     private Job verifyDefaultBridgesTask;
 
@@ -592,7 +593,8 @@ public class PreferencesTorBridges extends Fragment implements View.OnClickListe
         }
 
         requestedBridgesToAdd = null;
-    }
+requestedBridgesIsGithub = false;
+}
 
     @Override
     public void onClick(View view) {
@@ -880,7 +882,7 @@ public class PreferencesTorBridges extends Fragment implements View.OnClickListe
         return bridge.contains("[") && bridge.contains("]");
     }
 
-    private void addRequestedBridges(String bridgesToAdd, List<String> savedCustomBridges) {
+    private void addRequestedBridges(String bridgesToAdd, List<String> savedCustomBridges, boolean isGithub) {
         List<String> bridgesListNew = new ArrayList<>();
         String[] bridgesArrNew = unescapeHTML(bridgesToAdd).split("\n");
 
@@ -905,7 +907,13 @@ public class PreferencesTorBridges extends Fragment implements View.OnClickListe
             FileManager.writeToTextFile(getActivity(), currentBridgesFilePath, bridgesListNew, "ignored");
 
             if (!bridgesToAdd.isEmpty()) {
-                if (bridgesToAdd.contains(obfs4.toString())) {
+                    if (isGithub) {
+                        // GitHub bridges are vanilla - set to vanilla and apply immediately
+                        if (!spOwnBridges.getSelectedItem().toString().equals(vanilla.toString())) {
+                            spOwnBridges.setSelection(8);
+                        }
+                        ownBridgesOperation(bridgesListNew);
+                    } else if (bridgesToAdd.contains(obfs4.toString())) {
                     if (!spOwnBridges.getSelectedItem().toString().equals(obfs4.toString())) {
                         spOwnBridges.setSelection(0);
                     } else {
@@ -976,8 +984,9 @@ public class PreferencesTorBridges extends Fragment implements View.OnClickListe
         }
     }
 
-    public void readSavedCustomBridges(String bridgesToAdd) {
+    public void readSavedCustomBridges(String bridgesToAdd, boolean isGithub) {
         requestedBridgesToAdd = bridgesToAdd;
+        requestedBridgesIsGithub = isGithub;
 
         currentBridgesFilePath = bridgesCustomFilePath;
 
@@ -1202,7 +1211,7 @@ public class PreferencesTorBridges extends Fragment implements View.OnClickListe
                 case ADD_REQUESTED_BRIDGES_TAG -> {
                     final List<String> savedCustomBridges = lines;
                     if (handler != null && savedCustomBridges != null) {
-                        handler.post(() -> addRequestedBridges(requestedBridgesToAdd, savedCustomBridges));
+                        handler.post(() -> addRequestedBridges(requestedBridgesToAdd, savedCustomBridges, requestedBridgesIsGithub));
                     }
                 }
             }
