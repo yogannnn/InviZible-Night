@@ -464,8 +464,8 @@ class PreferencesTorBridgesViewModel @Inject constructor(
         bridgeCountries.clear()
     }
 
-    private fun showBridgesReadyDialog(bridges: String) {
-        dialogsFlowMutableLiveData.value = DialogsFlowState.BridgesReadyDialog(bridges)
+    private fun showBridgesReadyDialog(bridges: String, source: String = "torproject") {
+        dialogsFlowMutableLiveData.value = DialogsFlowState.BridgesReadyDialog(bridges, source)
     }
 
     private fun showPleaseWaitDialog() {
