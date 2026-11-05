@@ -335,7 +335,7 @@ class PreferencesTorBridgesViewModel @Inject constructor(
             try {
                 val bridges = requestBridgesInteractor.requestIgarekGithubBridges()
                 dismissRequestBridgesDialogs()
-                showBridgesReadyDialog(bridges)
+                showBridgesReadyDialog(bridges, "github")
             } catch (e: Exception) {
                 e.message?.let { showErrorMessage(it) }
                 loge("PreferencesTorBridgesViewModel requestIgarekGithubBridges", e)

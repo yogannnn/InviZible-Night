@@ -618,8 +618,10 @@ public class PreferencesTorBridges extends Fragment implements View.OnClickListe
                         ((DialogsFlowState.CaptchaDialog) dialogsState).getSecretCode()
                 );
             } else if (dialogsState instanceof DialogsFlowState.BridgesReadyDialog) {
+                DialogsFlowState.BridgesReadyDialog bridgeDialog = (DialogsFlowState.BridgesReadyDialog) dialogsState;
                 showBridgesReadyDialog(
-                        ((DialogsFlowState.BridgesReadyDialog) dialogsState).getBridges()
+                        bridgeDialog.getBridges(),
+                        bridgeDialog.getSource()
                 );
             } else if (dialogsState instanceof DialogsFlowState.NoDialogs) {
                 dismissRequestBridgesDialogs();
@@ -663,13 +665,14 @@ public class PreferencesTorBridges extends Fragment implements View.OnClickListe
         }
     }
 
-    private void showBridgesReadyDialog(String bridges) {
+    private void showBridgesReadyDialog(String bridges, String source) {
         String tag = BridgesReadyDialogFragment.class.getCanonicalName();
         BridgesReadyDialogFragment dialog =
                 (BridgesReadyDialogFragment) getChildFragmentManager().findFragmentByTag(tag);
         if (dialog == null || !dialog.isAdded()) {
             dialog = new BridgesReadyDialogFragment();
             dialog.setBridges(bridges);
+            dialog.setSource(source);
             dialog.show(getChildFragmentManager(), tag);
         }
     }

@@ -34,7 +34,7 @@ sealed class DialogsFlowState {
         val secretCode: String
     ) : DialogsFlowState()
 
-    data class BridgesReadyDialog(val bridges: String) : DialogsFlowState()
+    data class BridgesReadyDialog(val bridges: String, val source: String = "torproject") : DialogsFlowState()
 
     object NoDialogs : DialogsFlowState()
 

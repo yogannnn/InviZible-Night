@@ -45,6 +45,7 @@ class BridgesReadyDialogFragment : ExtendedDialogFragment() {
     )
 
     var bridges = ""
+    var source = "torproject"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         App.instance.daggerComponent.inject(this)
@@ -61,7 +62,10 @@ class BridgesReadyDialogFragment : ExtendedDialogFragment() {
                 text = bridges
             }
 
-            setTitle(R.string.pref_fast_use_tor_bridges_show_dialog)
+            setTitle(
+                if (source == "github") R.string.pref_fast_use_tor_bridges_show_dialog_github
+                else R.string.pref_fast_use_tor_bridges_show_dialog
+            )
             setView(tvBridges)
 
             setPositiveButton(R.string.pref_fast_use_tor_bridges_add_dialog) { _, _ ->

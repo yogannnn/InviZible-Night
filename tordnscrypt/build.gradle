@@ -9,7 +9,7 @@ plugins {
     id "kotlin-parcelize"
 }
 
-// <--- ДОБАВЛЕНО: Чтение локальных ключей (если есть) --->
+// <--- Чтение локальных ключей (если есть) --->
 def keystorePropertiesFile = rootProject.file("keystore.properties")
 def keystoreProperties = new Properties()
 if (keystorePropertiesFile.exists()) {
@@ -26,7 +26,7 @@ android {
     productFlavors {
 
         fdroid {
-            applicationId "com.yogannnn.invizible.night" // Ваше имя пакета
+            applicationId "com.yogannnn.invizible.night"
             versionName "7.6.0"
             dimension = 'version'
             resValue 'string', 'package_name', applicationId
@@ -86,7 +86,7 @@ android {
         vectorDrawables.useSupportLibrary = true
     }
 
-    // <--- ДОБАВЛЕНО: Настройка подписи --->
+    // <--- Настройка подписи --->
     signingConfigs {
         release {
             if (System.getenv("CI")) { // Для GitHub Actions
@@ -95,7 +95,7 @@ android {
                 keyAlias System.getenv("KEY_ALIAS")
                 keyPassword System.getenv("KEY_PASSWORD")
             } else {
-                // Для локальной сборки (если создадите keystore.properties)
+                // Для локальной сборки
                 if (keystorePropertiesFile.exists()) {
                     storeFile file(keystoreProperties['storeFile'])
                     storePassword keystoreProperties['storePassword']
