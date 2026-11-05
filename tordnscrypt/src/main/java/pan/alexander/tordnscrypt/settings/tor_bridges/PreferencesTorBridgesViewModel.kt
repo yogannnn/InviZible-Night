@@ -328,6 +328,21 @@ class PreferencesTorBridgesViewModel @Inject constructor(
         dialogsFlowMutableLiveData.value = DialogsFlowState.SelectBridgesTransportDialog
     }
 
+    fun requestIgarekGithubBridges() {
+        showPleaseWaitDialog()
+        torBridgesRequestJob?.cancel()
+        torBridgesRequestJob = viewModelScope.launch {
+            try {
+                val bridges = requestBridgesInteractor.requestIgarekGithubBridges()
+                dismissRequestBridgesDialogs()
+                showBridgesReadyDialog(bridges)
+            } catch (e: Exception) {
+                e.message?.let { showErrorMessage(it) }
+                loge("PreferencesTorBridgesViewModel requestIgarekGithubBridges", e)
+            }
+        }
+    }
+
     fun requestTorBridgesCaptchaChallenge(transport: String, ipv6Bridges: Boolean) {
 
         showPleaseWaitDialog()

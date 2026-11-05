@@ -106,6 +106,8 @@ class SelectBridgesTransportDialogFragment : ExtendedDialogFragment() {
                             "webtunnel",
                             binding.chbRequestIPv6Bridges.isChecked
                         )
+                    R.id.rbIgarekGithub ->
+                        preferencesTorBridgesViewModel.requestIgarekGithubBridges()
                 }
             }
 

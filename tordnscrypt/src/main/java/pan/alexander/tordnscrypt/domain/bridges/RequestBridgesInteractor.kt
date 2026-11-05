@@ -145,6 +145,25 @@ class RequestBridgesInteractor @Inject constructor(
         }
     }
 
+    suspend fun requestIgarekGithubBridges(): String =
+        suspendCancellableCoroutine { continuation ->
+            cachedExecutor.submit {
+                try {
+                    val url = "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/main/TOR-BRIDGES/TOR_BRIDGES_VANILLA.txt"
+                    httpsConnectionManager.get(url) { inputStream ->
+                        val bridges = inputStream.bufferedReader().useLines { lines ->
+                            lines.filter { it.isNotEmpty() && !it.startsWith("#") }
+                                 .take(10)
+                                 .toList()
+                        }.shuffled()
+                        continuation.resume(bridges.joinToString("\n"), null)
+                    }
+                } catch (e: Exception) {
+                    continuation.resumeWithException(e)
+                }
+            }
+        }
+    
     private fun lockWakeLock() {
         if (!wakeLocksManager.isWiFiWakeLockHeld || !wakeLocksManager.isPowerWakeLockHeld) {
             wakeLockIsHeld = true
