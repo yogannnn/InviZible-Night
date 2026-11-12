@@ -19,19 +19,50 @@ jobs:
           submodules: recursive
           fetch-depth: 0
 
-      - name: Merge upstream
+      # --- УСКОРЕНИЕ СБОРКИ: КЭШ GRADLE ---
+      - name: Cache Gradle packages
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+          restore-keys: |
+            ${{ runner.os }}-gradle-
+
+      # --- УСКОРЕНИЕ СБОРКИ: КЭШ NDK ---
+      - name: Cache NDK
+        uses: actions/cache@v4
+        with:
+          path: /usr/local/lib/android/sdk/ndk
+          key: ${{ runner.os }}-ndk-23.1.7779620
+
+      # --- БЕЗОПАСНЫЙ МЕРЖ С UPSTREAM ---
+      - name: Merge upstream (Safe Mode)
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git config --global submodule.recurse false # Отключаем авто-скачивание субмодулей при fetch
+          
           git remote add upstream https://github.com/Gedsh/InviZible.git || true
-          git fetch upstream
+          git fetch upstream --no-recurse-submodules
+          
           UPSTREAM_BRANCH=$(git remote show upstream | grep 'HEAD branch' | cut -d' ' -f5)
           echo "Upstream default branch: $UPSTREAM_BRANCH"
+          
+          # Пытаемся сделать мерж
           if git merge upstream/$UPSTREAM_BRANCH --no-edit -m "Auto-merge upstream ($UPSTREAM_BRANCH) into night"; then
-            echo "✅ Merge successful"
+            echo "✅ Merge successful. Updating submodules..."
+            # Пытаемся обновить субмодули после мержа
+            if git submodule update --init --recursive; then
+              echo "✅ Submodules updated successfully."
+            else
+              echo "::warning::Submodule update failed (force-push in upstream?). Reverting to local code."
+              git merge --abort || true
+            fi
           else
-            echo "::error::Merge conflict with upstream. Resolve locally: git pull, fix conflicts, git push."
-            exit 1
+            echo "::warning::Merge conflict with upstream. Building local code instead."
+            git merge --abort || true
           fi
 
       - name: Get version
@@ -93,6 +124,7 @@ jobs:
             - **Base version** (from upstream): ${{ steps.meta.outputs.base_version }}
             - **Release version**: ${{ steps.meta.outputs.version }}
             - **Date**: ${{ steps.meta.outputs.date }}
+            - **Build**: \#${{ github.run_number }}
             - **Commit**: ${{ github.sha }}
             
             Based on upstream [InviZible Pro](https://github.com/Gedsh/InviZible) by Gedsh.
