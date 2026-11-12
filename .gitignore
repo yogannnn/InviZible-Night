@@ -2,6 +2,7 @@
 *.jks
 *.keystore
 release-key.jks
+AGENTS.md
 keystore.properties
 
 # --- СБОРОЧНЫЕ ФАЙЛЫ ANDROID ---

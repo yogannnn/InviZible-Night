@@ -848,9 +848,7 @@ requestedBridgesIsGithub = false;
                 }
 
                 if (persistList != null) {
-                    List<String> retainList = new ArrayList<>(persistList);
-                    retainList.retainAll(bridgesListNew);
-                    bridgesListNew.removeAll(retainList);
+                    bridgesListNew.removeAll(persistList);
                     persistList.addAll(bridgesListNew);
                     bridgesListNew = persistList;
                 }
@@ -894,9 +892,7 @@ requestedBridgesIsGithub = false;
             }
 
             if (savedCustomBridges != null) {
-                List<String> retainList = new ArrayList<>(savedCustomBridges);
-                retainList.retainAll(bridgesListNew);
-                bridgesListNew.removeAll(retainList);
+                bridgesListNew.removeAll(savedCustomBridges);
                 savedCustomBridges.addAll(bridgesListNew);
                 bridgesListNew = savedCustomBridges;
             }
