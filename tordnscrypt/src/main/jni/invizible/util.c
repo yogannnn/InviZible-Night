@@ -18,7 +18,7 @@
     You should have received a copy of the GNU General Public License
     along with InviZible Pro.  If not, see <http://www.gnu.org/licenses/>.
 
-    Copyright 2019-2025 by Garmatin Oleksandr invizible.soft@gmail.com
+    Copyright 2019-2026 by Garmatin Oleksandr invizible.soft@gmail.com
 */
 
 #if defined(__x86_64__)
@@ -95,125 +95,6 @@ uint16_t calc_checksum(uint16_t start, const uint8_t *buffer, size_t length) {
     return (uint16_t) sum;
 }
 
-uint16_t do_csum_generic(uint16_t start, const uint8_t *buffer, size_t length) {
-    register uint32_t sum = start;
-    register uint16_t *buf = (uint16_t *) buffer;
-    register size_t len = length;
-
-    while (len > 1) {
-        sum += *buf++;
-        len -= 2;
-    }
-
-    if (len > 0)
-        sum += *((uint8_t *) buf);
-
-    while (sum >> 16)
-        sum = (sum & 0xFFFF) + (sum >> 16);
-
-    return (uint16_t) sum;
-}
-
-static inline uint16_t from64to16(uint64_t x) {
-    x = (x & 0xffffffff) + (x >> 32);
-    x = (x & 0xffffffff) + (x >> 32);
-    x = ((uint32_t) x & 0xffff) + ((uint32_t) x >> 16);
-    x = ((uint32_t) x & 0xffff) + ((uint32_t) x >> 16);
-    return x;
-}
-
-uint16_t do_csum_neon(uint16_t start, const uint8_t *buff, size_t len) {
-    unsigned int odd, count;
-    uint64_t result = start;
-    unsigned int count64;
-    uint32x4_t vzero = (uint32x4_t) {0, 0, 0, 0};
-
-    register uint32x4_t v0, v1, v2, v3;
-
-    if (len <= 0)
-        return result;
-
-    odd = 1 & (unsigned long) buff;
-    if (odd) {
-        result += *(unsigned short *) buff;
-        len--;
-        buff++;
-    }
-
-    count = len >> 1;
-    if (count) {
-        if (2 & (unsigned long) buff) {
-            result += *(unsigned short *) buff;
-            count--;
-            len -= 2;
-            buff += 2;
-        }
-        count >>= 1;            /* nr of 32-bit words.. */
-        if (count) {
-            if (4 & (unsigned long) buff) {
-                result += *(unsigned int *) buff;
-                count--;
-                len -= 4;
-                buff += 4;
-            }
-            count >>= 1;    /* nr of 64-bit words.. */
-
-            v0 = vzero;
-            v1 = vzero;
-            v2 = vzero;
-            v3 = vzero;
-
-            count64 = count >> 3;  /* compute 64 Byte circle */
-            while (count64) {
-                v0 = vpadalq_u16(v0,
-                                 +vld1q_u16((uint16_t *) buff + 0));
-                v1 = vpadalq_u16(v1,
-                                 +vld1q_u16((uint16_t *) buff + 8));
-                v2 = vpadalq_u16(v2,
-                                 +vld1q_u16((uint16_t *) buff + 16));
-                v3 = vpadalq_u16(v3,
-                                 +vld1q_u16((uint16_t *) buff + 24));
-                buff += 64;
-                count64--;
-            }
-            v0 = vaddq_u32(v0, v1);
-            v2 = vaddq_u32(v2, v3);
-            v0 = vaddq_u32(v0, v2);
-
-            count %= 8;
-            while (count >= 2) { /* compute 16 byte circle */
-                v0 = vpadalq_u16(v0,
-                                 +vld1q_u16((uint16_t *) buff + 0));
-                buff += 16;
-                count -= 2;
-            }
-
-            result += vgetq_lane_u32(v0, 0);
-            result += vgetq_lane_u32(v0, 1);
-            result += vgetq_lane_u32(v0, 2);
-            result += vgetq_lane_u32(v0, 3);
-            if (count & 1) {
-                result += *(unsigned long long *) buff;
-                buff += 8;
-            }
-            if (len & 4) {
-                result += *(unsigned int *) buff;
-                buff += 4;
-            }
-        }
-        if (len & 2) {
-            result += *(unsigned short *) buff;
-            buff += 2;
-        }
-    }
-    if (len & 1)
-        result += *buff;
-    result = from64to16(result);
-    if (odd)
-        result = ((result >> 8) & 0xff) | ((result & 0xff) << 8);
-    return result;
-}
-
 int compare_u32(uint32_t s1, uint32_t s2) {
     // https://tools.ietf.org/html/rfc1982
     if (s1 == s2)
@@ -234,12 +115,54 @@ int sdk_int(JNIEnv *env) {
     return (*env)->GetStaticIntField(env, clsVersion, fid);
 }
 
-void log_android(int prio, const char *fmt, ...) {
+uint8_t *get_packet_buffer(const struct arguments *args, enum packet_buffer_kind kind,
+                           size_t length, const char *tag) {
+    if (args->buffers == NULL)
+        return ng_malloc(length, tag);
+
+    struct packet_buffer *buffer = &args->buffers->buffer[kind];
+    if (buffer->data == NULL || buffer->capacity < length) {
+        // Small ACKs should not make the output buffer grow for every larger packet.
+        size_t capacity = length < get_mtu() ? get_mtu() : length;
+        uint8_t *data = (buffer->data == NULL ? ng_malloc(capacity, tag)
+                                             : ng_realloc(buffer->data, capacity, tag));
+        if (data == NULL)
+            return NULL; // A failed resize leaves the old allocation owned by this scope.
+        buffer->data = data;
+        buffer->capacity = capacity;
+    }
+    return buffer->data;
+}
+
+void release_packet_buffer(const struct arguments *args, uint8_t *buffer) {
+    if (args->buffers == NULL)
+        ng_free(buffer, __FILE__, __LINE__);
+}
+
+void clear_packet_buffers(struct packet_buffers *buffers) {
+    for (size_t i = 0; i < PACKET_BUFFER_COUNT; i++) {
+        ng_free(buffers->buffer[i].data, __FILE__, __LINE__);
+        buffers->buffer[i].data = NULL;
+        buffers->buffer[i].capacity = 0;
+    }
+}
+
+const char *format_log_address(struct log_address *address) {
+    int saved_errno = errno;
+    if (address->text[0] == 0 &&
+        inet_ntop(address->version == 4 ? AF_INET : AF_INET6, address->address,
+                  address->text, sizeof(address->text)) == NULL)
+        strcpy(address->text, "?");
+    errno = saved_errno;
+    return address->text;
+}
+
+void log_android_write(int prio, const char *fmt, ...) {
     if (prio >= LOG_LEVEL) {
         char line[1024];
         va_list argptr;
         va_start(argptr, fmt);
-        vsprintf(line, fmt, argptr);
+        vsnprintf(line, sizeof(line), fmt, argptr);
         __android_log_print(prio, TAG, "%s", line);
         va_end(argptr);
     }
@@ -304,7 +227,11 @@ char *hex(const u_int8_t *data, const size_t len) {
     char hex_str[] = "0123456789ABCDEF";
 
     char *hexout;
+    if (len > (SIZE_MAX - 1) / 3)
+        return NULL;
     hexout = (char *) ng_malloc(len * 3 + 1, "hex");
+    if (hexout == NULL)
+        return NULL;
 
     for (size_t i = 0; i < len; i++) {
         hexout[i * 3 + 0] = hex_str[(data[i] >> 4) & 0x0F];

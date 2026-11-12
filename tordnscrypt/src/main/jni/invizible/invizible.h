@@ -14,11 +14,14 @@
     You should have received a copy of the GNU General Public License
     along with InviZible Pro.  If not, see <http://www.gnu.org/licenses/>.
 
-    Copyright 2019-2025 by Garmatin Oleksandr invizible.soft@gmail.com
+    Copyright 2019-2026 by Garmatin Oleksandr invizible.soft@gmail.com
 */
 #include <jni.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h>
+#include <stdatomic.h>
+#define INVIZIBLE_ATOMIC_FLAGS 1
 #include <string.h>
 #include <ctype.h>
 #include <time.h>
@@ -73,6 +76,7 @@
 #define UDP_TIMEOUT_53 15 // seconds
 #define UDP_TIMEOUT_ANY 300 // seconds
 #define UDP_KEEP_TIMEOUT 60 // seconds
+#define UDP_BLOCKED_MAX 1024 // cached blocked flows, independent of the active socket limit
 #define TCP_YIELD 10 // packets
 #define UDP_YIELD 10 // packets
 
@@ -80,14 +84,20 @@
 #define TCP_IDLE_TIMEOUT 3600 // seconds ~net.inet.tcp.keepidle
 #define TCP_CLOSE_TIMEOUT 20 // seconds
 #define TCP_KEEP_TIMEOUT 300 // seconds
+#define TCP_WINDOW_PROBE_MIN 1000 // milliseconds
+#define TCP_WINDOW_PROBE_MAX 60000 // milliseconds
 // https://en.wikipedia.org/wiki/Maximum_segment_lifetime
 
 #define SESSION_LIMIT 40 // percent
 #define SESSION_MAX (1024 * SESSION_LIMIT / 100) // number
+#define SESSION_CLOSED_MAX 1024 // retained closed TCP/UDP records, independent of active/blocked limits
 
 #define SEND_BUF_DEFAULT 163840 // bytes
 
 #define UID_MAX_AGE 30000 // milliseconds
+#define UID_CACHE_MAX 4096 // entries; bound proc-table snapshots independently of traffic rate
+#define TCP_QUEUE_BYTES (256 * 1024) // retained payload per TCP session
+#define TCP_QUEUE_SEGMENTS 1024 // also bound metadata for small/out-of-order packets
 
 #define SOCKS5_NONE 1
 #define SOCKS5_HELLO 2
@@ -104,9 +114,20 @@
 struct context {
     pthread_mutex_t lock;
     int pipefds[2];
-    int stopping;
+    atomic_int stopping;
     int sdk;
     struct ng_session *ng_session;
+};
+
+enum packet_buffer_kind { PACKET_INPUT, PACKET_OUTPUT, PACKET_BUFFER_COUNT };
+
+struct packet_buffer {
+    uint8_t *data;
+    size_t capacity;
+};
+
+struct packet_buffers {
+    struct packet_buffer buffer[PACKET_BUFFER_COUNT];
 };
 
 struct arguments {
@@ -116,6 +137,9 @@ struct arguments {
     jboolean fwd53;
     jint rcode;
     struct context *ctx;
+    // Borrowed from handle_events; only that event thread may use these buffers.
+    // NULL retains standalone helper calls' allocate/free behavior.
+    struct packet_buffers *buffers;
 };
 
 struct allowed {
@@ -199,6 +223,7 @@ struct tcp_session {
 
     uint32_t acked; // host notation
     long long last_keep_alive;
+    int window_probe_interval; // milliseconds; zero when the app window is open
 
     uint64_t sent;
     uint64_t received;
@@ -217,6 +242,18 @@ struct tcp_session {
 
     uint8_t state;
     uint8_t socks5;
+    bool upstream_eof;
+    bool fin_received;
+    bool fin_acked;
+    uint32_t fin_seq; // App FIN position, excluding the FIN byte.
+    uint8_t dns_header[14]; // TCP length prefix and DNS header for incremental validation.
+    uint8_t dns_header_used;
+    uint16_t dns_body_remaining;
+    uint8_t *dns_response; // At most one length-prefixed frame (65537 bytes).
+    size_t dns_response_size;
+    size_t dns_response_used;
+    size_t dns_response_sent;
+    bool dns_response_ready;
     struct segment *forward;
 };
 
@@ -345,6 +382,11 @@ typedef struct dhcp_option {
 
 // Prototypes
 
+// DNS fields and TCP options need not be aligned to a uint16_t boundary.
+static inline uint16_t read_net16(const uint8_t *data) {
+    return (uint16_t) ((uint16_t) data[0] << 8 | data[1]);
+}
+
 void handle_signal(int sig, siginfo_t *info, void *context);
 
 void *handle_events(void *a);
@@ -369,6 +411,7 @@ int check_tcp_session(const struct arguments *args,
                       struct ng_session *s,
                       int sessions, int maxsessions);
 
+// Returns milliseconds until scheduled work, or zero when socket/TUN events suffice.
 int monitor_tcp_session(const struct arguments *args, struct ng_session *s, int epoll_fd);
 
 int get_icmp_timeout(const struct icmp_session *u, int sessions, int maxsessions);
@@ -391,6 +434,10 @@ void check_icmp_socket(const struct arguments *args, const struct epoll_event *e
 void check_udp_socket(const struct arguments *args, const struct epoll_event *ev);
 
 int32_t get_qname(const uint8_t *data, const size_t datalen, uint16_t off, char *qname);
+
+bool dns_has_multiple_questions(const uint8_t *data, size_t datalen);
+
+bool check_dns_tcp_response(struct tcp_session *cur, const uint8_t *data, size_t datalen);
 
 void parse_dns_response(const struct arguments *args, const struct ng_session *session,
                         const uint8_t *data, size_t *datalen);
@@ -425,6 +472,20 @@ jboolean is_icmp_supported(const uint8_t *pkt,
 
 int has_udp_session(const struct arguments *args, const uint8_t *pkt, const uint8_t *payload);
 
+struct ng_session *find_udp_session(const struct arguments *args, const uint8_t *pkt,
+                                    const uint8_t *payload);
+
+// A non-NULL lookup records a completed search, including a NULL (missing) session.
+// Valid only while processing this packet on the event thread under ctx->lock.
+struct udp_session_lookup {
+    struct ng_session *session;
+};
+
+jboolean handle_udp_with_lookup(const struct arguments *args,
+                                const uint8_t *pkt, size_t length, const uint8_t *payload,
+                                int uid, struct allowed *redirect, int epoll_fd,
+                                const struct udp_session_lookup *lookup);
+
 void block_udp(const struct arguments *args,
                const uint8_t *pkt, size_t length,
                const uint8_t *payload,
@@ -447,7 +508,7 @@ jboolean handle_tcp(const struct arguments *args,
                     int uid, int allowed, struct allowed *redirect,
                     const int epoll_fd);
 
-void queue_tcp(const struct arguments *args,
+int queue_tcp(const struct arguments *args,
                const struct tcphdr *tcphdr,
                const char *session, struct tcp_session *cur,
                const uint8_t *data, uint16_t datalen);
@@ -519,10 +580,6 @@ int protect_socket(const struct arguments *args, int socket, int uid);
 
 uint16_t calc_checksum(uint16_t start, const uint8_t *buffer, size_t length);
 
-uint16_t do_csum_generic(uint16_t start, const uint8_t *buffer, size_t length);
-
-uint16_t do_csum_neon(uint16_t start, const uint8_t *buffer, size_t length);
-
 jobject jniGlobalRef(JNIEnv *env, jobject cls);
 
 jclass jniFindClass(JNIEnv *env, const char *name);
@@ -537,7 +594,28 @@ int jniCheckException(JNIEnv *env);
 
 int sdk_int(JNIEnv *env);
 
-void log_android(int prio, const char *fmt, ...);
+uint8_t *get_packet_buffer(const struct arguments *args, enum packet_buffer_kind kind,
+                           size_t length, const char *tag);
+void release_packet_buffer(const struct arguments *args, uint8_t *buffer);
+void clear_packet_buffers(struct packet_buffers *buffers);
+
+// Keep diagnostic arguments unevaluated when their level is disabled.
+#define log_android(prio, ...) do { \
+    int log_priority = (prio); \
+    if (log_priority >= LOG_LEVEL) \
+        log_android_write(log_priority, __VA_ARGS__); \
+} while (0)
+
+void log_android_write(int prio, const char *fmt, ...);
+
+struct log_address {
+    int version;
+    const void *address;
+    char text[INET6_ADDRSTRLEN + 1];
+};
+
+// Stack-local cache: also usable where policy/accounting needs a textual address.
+const char *format_log_address(struct log_address *address);
 
 void log_packet(const struct arguments *args, jobject jpacket);
 

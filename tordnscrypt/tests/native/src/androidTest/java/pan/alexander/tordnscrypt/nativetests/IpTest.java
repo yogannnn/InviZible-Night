@@ -1,0 +1,33 @@
+package pan.alexander.tordnscrypt.nativetests;
+
+import androidx.test.ext.junit.runners.AndroidJUnit4;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+
+/** Regressions for ip.c. */
+@RunWith(AndroidJUnit4.class)
+public final class IpTest extends NativeTestSupport {
+    @Test public void udpFlowLookupIsSharedAcrossLimitUidPolicyAndForwarding() { check("udpPacketLookup"); }
+    @Test public void dnsKeepsForwardingPolicyAndSessionLimitRules() { check("udpDnsLookupPolicy"); }
+    @Test public void tunnelReadsReuseInputThroughRetriesAndEof() { check("tunBufferReuse"); }
+    @Test public void ipv4ChecksumIncludesHeaderOptionsAndPadding() { check("ipChecksumHeader"); }
+    @Test public void ipv4UdpChecksumValidationAllowsOmission() { check("ipChecksumUdp4"); }
+    @Test public void ipv6UdpChecksumValidationRejectsOmission() { check("ipChecksumUdp6"); }
+    @Test public void ipv4TcpChecksumsCoverPseudoHeaderAndPayload() { check("ipChecksumTcp4"); }
+    @Test public void ipv6TcpChecksumsCoverPseudoHeaderAndPayload() { check("ipChecksumTcp6"); }
+    @Test public void ipv4IcmpChecksumsCoverEchoAndPayload() { check("ipChecksumIcmp4"); }
+    @Test public void ipv6IcmpChecksumsCoverPseudoHeaderAndPayload() { check("ipChecksumIcmp6"); }
+    @Test public void transportChecksumsExcludeIpv6ExtensionHeaders() { check("ipChecksumExtensions"); }
+    @Test public void checksumsUseFinalRouteAndHomeAddresses() { check("ipChecksumRouting"); }
+    @Test public void generatedZeroUdpChecksumIsEncodedAsAllOnes() { check("ipChecksumZero"); }
+    @Test public void tunnelReadAllocationFailureStopsCleanly() { check("tunAllocationFailure"); }
+    @Test public void packetHeaderBounds() { check("memoryPackets"); }
+    @Test public void uidLookupClosesMalformedProcFile() { check("uidFileCleanup"); }
+    @Test public void uidLookupSurvivesCacheAllocationFailure() { check("uidCacheAllocationFailure"); }
+    @Test public void uidCacheRefreshDoesNotDuplicateEntries() { check("uidCacheRefresh"); }
+    @Test public void uidCacheRemainsBounded() { check("uidCacheLimit"); }
+    @Test public void uidCacheSeparatesProtocolsAndAddressFamilies() { check("uidCacheKeys"); }
+    @Test public void ipv4HeaderOptions() { check("udp4Options"); }
+    @Test public void ipv6ExtensionHeaders() { check("udp6Extensions"); }
+}

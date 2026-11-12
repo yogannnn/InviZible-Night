@@ -16,10 +16,27 @@
     You should have received a copy of the GNU General Public License
     along with InviZible Pro.  If not, see <http://www.gnu.org/licenses/>.
 
-    Copyright 2019-2025 by Garmatin Oleksandr invizible.soft@gmail.com
+    Copyright 2019-2026 by Garmatin Oleksandr invizible.soft@gmail.com
 */
 
 #include "invizible.h"
+
+struct ng_session *find_udp_session(const struct arguments *args, const uint8_t *pkt,
+                                    const uint8_t *payload) {
+    const uint8_t version = pkt[0] >> 4;
+    const struct iphdr *ip4 = (const struct iphdr *) pkt;
+    const struct ip6_hdr *ip6 = (const struct ip6_hdr *) pkt;
+    const struct udphdr *udp = (const struct udphdr *) payload;
+    struct ng_session *cur = args->ctx->ng_session;
+    while (cur != NULL &&
+           !(cur->protocol == IPPROTO_UDP && cur->udp.version == version &&
+             cur->udp.source == udp->source && cur->udp.dest == udp->dest &&
+             (version == 4 ? cur->udp.saddr.ip4 == ip4->saddr && cur->udp.daddr.ip4 == ip4->daddr
+                           : memcmp(&cur->udp.saddr.ip6, &ip6->ip6_src, 16) == 0 &&
+                             memcmp(&cur->udp.daddr.ip6, &ip6->ip6_dst, 16) == 0)))
+        cur = cur->next;
+    return cur;
+}
 
 void clear(struct context *ctx) {
     struct ng_session *s = ctx->ng_session;
@@ -38,6 +55,10 @@ void clear(struct context *ctx) {
 
 void *handle_events(void *a) {
     struct arguments *args = (struct arguments *) a;
+    // Reads finish processing before the next event. Keep output separate from
+    // borrowed input, and never use either scratch buffer for retained session data.
+    struct packet_buffers buffers = {0};
+    args->buffers = &buffers;
     log_android(ANDROID_LOG_WARN, "Start events tun=%d", args->tun);
 
     // Get max number of sessions
@@ -92,6 +113,7 @@ void *handle_events(void *a) {
         log_android(ANDROID_LOG_DEBUG, "Loop");
 
         int recheck = 0;
+        int tcp_wait = 0;
         int timeout = EPOLL_TIMEOUT;
 
         // Count sessions
@@ -109,8 +131,11 @@ void *handle_events(void *a) {
             } else if (s->protocol == IPPROTO_TCP) {
                 if (s->tcp.state != TCP_CLOSING && s->tcp.state != TCP_CLOSE)
                     tsessions++;
-                if (s->socket >= 0)
-                    recheck = recheck | monitor_tcp_session(args, s, epoll_fd);
+                if (s->socket >= 0) {
+                    int wait = monitor_tcp_session(args, s, epoll_fd);
+                    if (wait > 0 && (tcp_wait == 0 || wait < tcp_wait))
+                        tcp_wait = wait;
+                }
             }
             s = s->next;
         }
@@ -123,6 +148,7 @@ void *handle_events(void *a) {
 
             time_t now = time(NULL);
             struct ng_session *sl = NULL;
+            unsigned int closed_sessions = 0;
             s = args->ctx->ng_session;
             while (s != NULL) {
                 int del = 0;
@@ -136,20 +162,35 @@ void *handle_events(void *a) {
                     }
                 } else if (s->protocol == IPPROTO_UDP) {
                     del = check_udp_session(args, s, sessions, maxsessions);
-                    if (s->udp.state == UDP_ACTIVE && !del) {
-                        int stimeout = s->udp.time +
-                                       get_udp_timeout(&s->udp, sessions, maxsessions) - now + 1;
-                        if (stimeout > 0 && stimeout < timeout)
+                    if (!del) {
+                        int lifetime = (s->udp.state == UDP_CLOSED || s->udp.state == UDP_BLOCKED
+                                ? UDP_KEEP_TIMEOUT : get_udp_timeout(&s->udp, sessions, maxsessions));
+                        int stimeout = s->udp.time + lifetime - now + 1;
+                        if (stimeout < 1)
+                            stimeout = 1;
+                        if (stimeout < timeout)
                             timeout = stimeout;
                     }
                 } else if (s->protocol == IPPROTO_TCP) {
                     del = check_tcp_session(args, s, sessions, maxsessions);
-                    if (s->tcp.state != TCP_CLOSING && s->tcp.state != TCP_CLOSE && !del) {
-                        int stimeout = s->tcp.time +
-                                       get_tcp_timeout(&s->tcp, sessions, maxsessions) - now + 1;
-                        if (stimeout > 0 && stimeout < timeout)
+                    if (!del) {
+                        int lifetime = (s->tcp.state == TCP_CLOSE
+                                ? TCP_KEEP_TIMEOUT : get_tcp_timeout(&s->tcp, sessions, maxsessions));
+                        int stimeout = s->tcp.time + lifetime - now + 1;
+                        if (stimeout < 1)
+                            stimeout = 1;
+                        if (stimeout < timeout)
                             timeout = stimeout;
                     }
+                }
+
+                // New sessions are prepended. Retain the most recently created
+                // closed records, after closing sockets and accounting usage.
+                // Evict before polling so no current event batch refers to them.
+                if (!del && ((s->protocol == IPPROTO_UDP && s->udp.state == UDP_CLOSED) ||
+                             (s->protocol == IPPROTO_TCP && s->tcp.state == TCP_CLOSE))) {
+                    if (++closed_sessions > SESSION_CLOSED_MAX)
+                        del = 1;
                 }
 
                 if (del) {
@@ -179,8 +220,11 @@ void *handle_events(void *a) {
 
         // Poll
         struct epoll_event ev[EPOLL_EVENTS];
+        int wait = recheck ? EPOLL_MIN_CHECK : timeout * 1000;
+        if (tcp_wait > 0 && tcp_wait < wait)
+            wait = tcp_wait;
         int ready = epoll_wait(epoll_fd, ev, EPOLL_EVENTS,
-                               recheck ? EPOLL_MIN_CHECK : timeout * 1000);
+                               wait);
 
         if (ready < 0) {
             if (errno == EINTR) {
@@ -262,6 +306,7 @@ void *handle_events(void *a) {
                             count++;
                             check_tcp_socket(args, &ev[i], epoll_fd);
                         } while (count < TCP_YIELD && !args->ctx->stopping &&
+                                 !session->tcp.upstream_eof &&
                                  !(ev[i].events & EPOLLERR) && (ev[i].events & EPOLLIN) &&
                                  is_readable(session->socket));
                     }
@@ -285,9 +330,10 @@ void *handle_events(void *a) {
                     "epoll close error %d: %s", errno, strerror(errno));
 
     // Cleanup
-    ng_free(args, __FILE__, __LINE__);
-
+    clear_packet_buffers(&buffers);
+    args->buffers = NULL;
     log_android(ANDROID_LOG_WARN, "Stopped events tun=%d", args->tun);
+    ng_free(args, __FILE__, __LINE__);
     return NULL;
 }
 
